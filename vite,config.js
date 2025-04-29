@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // ¡Así debe quedar para usuario.github.io!
+  base: '/MiPagina/', // ¡Así debe quedar para usuario.github.io!
   build: {
     outDir: 'dist',
     assetsDir: 'assets', // Directorio donde se colocan los assets
