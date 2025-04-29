@@ -1,14 +1,18 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // ¡Asegúrate que esto está así!
+  base: '/', // ¡Así debe quedar para usuario.github.io!
   build: {
     outDir: 'dist',
+    assetsDir: 'assets', // Directorio donde se colocan los assets
+    emptyOutDir: true,
     rollupOptions: {
-      input: './src/main.jsx' // Ruta correcta a tu entry point
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        entryFileNames: 'assets/[name]-[hash].js'
+      }
     }
   }
 })
