@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #007cf0, #00dfd8);
+    color: white;
+  }
+  
+  .video-jugador {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .video-responsive iframe {
+    width: 90%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .logros {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
