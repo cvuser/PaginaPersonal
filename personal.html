@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil personal de Carlos Velasco García - Pasiones e intereses">
+  <title>Carlos Velasco García | Perfil Personal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+</head>
+<body class="personal-page">
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">CVG</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="profesional.html"><i class="fas fa-briefcase"></i> Profesional</a></li>
+          <li><a href="deportivo.html"><i class="fas fa-running"></i> Deportivo</a></li>
+          <li><a href="personal.html" class="active"><i class="fas fa-user"></i> Personal</a></li>
+          <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="personal-hero">
+      <div class="container">
+        <h1>Perfil Personal</h1>
+        <p>Mis pasiones, intereses y vida fuera del desarrollo</p>
+      </div>
+    </section>
+
+    <section class="interests">
+      <div class="container">
+        <h2 class="section-title">Mis Intereses</h2>
+        <div class="interests-grid">
+          <article class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Escritura Creativa</h3>
+            <p>Me encanta escribir microrrelatos y poesía ocasional</p>
+          </article>
+          <article class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3>Música</h3>
+            <p>Toco la guitarra y compongo canciones como hobby</p>
+          </article>
+          <article class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-plane"></i>
+            </div>
+            <h3>Viajes</h3>
+            <p>He visitado 15 países y me encanta conocer nuevas culturas</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-generator">
+      <div class="container">
+        <h2 class="section-title">Generador de Microrrelatos</h2>
+        <div class="generator-container">
+          <p>Me gusta escribir microrrelatos interactivos. Haz clic en el botón para generar uno al azar:</p>
+          <button id="generate-story" class="btn btn-primary">Generar Historia</button>
+          <div id="story" class="story-output"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="personal-gallery">
+      <div class="container">
+        <h2 class="section-title">Galería Personal</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="https://www.japonalternativo.com/wp-content/uploads/2024/10/vuelos-directos-a-japon-desde-espana.jpg" alt="Carlos viajando" loading="lazy">
+            <figcaption>Viaje a Japón, 2022</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://i.ytimg.com/vi/NlpI_dTMZ70/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgXCg8MA8=&rs=AOn4CLATHe6EK9iTUktuJ2QwX1vKyzPpCQ" alt="Tocando guitarra" loading="lazy">
+            <figcaption>Presentación musical</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://i0.wp.com/elgeneracionalpost.com/wp-content/uploads/2023/10/librosjuegodetronos.jpg?fit=2560%2C2089&ssl=1" alt="Libros favoritos" loading="lazy">
+            <figcaption>Mi colección de libros</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/cvuser" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/carlos_velasco?igsh=MjE5czNhZ2h4d3Fl" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" type="module"></script>
+  <script src="js/modules/stories.js" type="module"></script>
+</body>
+</html>

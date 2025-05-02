@@ -1,0 +1,84 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: var(--white);
+    padding: 0 1.5rem;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image img {
+    max-height: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .professional-hero,
+  .sports-hero,
+  .personal-hero,
+  .contact-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+  }
+  
+  .professional-hero h1,
+  .sports-hero h1,
+  .personal-hero h1,
+  .contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .professional-hero p,
+  .sports-hero p,
+  .personal-hero p,
+  .contact-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 992px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    
+    .hero-content {
+      margin-bottom: 3rem;
+      max-width: 100%;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+  }

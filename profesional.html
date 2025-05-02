@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil profesional de Carlos Velasco García - Desarrollador Web Full Stack">
+  <title>Carlos Velasco García | Perfil Profesional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+</head>
+<body class="professional-page">
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">CVG</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="profesional.html" class="active"><i class="fas fa-briefcase"></i> Profesional</a></li>
+          <li><a href="deportivo.html"><i class="fas fa-running"></i> Deportivo</a></li>
+          <li><a href="personal.html"><i class="fas fa-user"></i> Personal</a></li>
+          <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="professional-hero">
+      <div class="container">
+        <h1>Perfil Profesional</h1>
+        <p>Desarrollador Web con más de 5 años de experiencia creando soluciones digitales</p>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <div class="container">
+        <h2 class="section-title">Experiencia Laboral</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2021 - Presente</div>
+            <div class="timeline-content">
+              <h3>Desarrollador Full Stack</h3>
+              <h4>Empresa Tecnológica XYZ</h4>
+              <ul>
+                <li>Desarrollo de aplicaciones web con React y Node.js</li>
+                <li>Implementación de APIs RESTful</li>
+                <li>Optimización de rendimiento frontend</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2019 - 2021</div>
+            <div class="timeline-content">
+              <h3>Desarrollador Frontend</h3>
+              <h4>Agencia Digital ABC</h4>
+              <ul>
+                <li>Creación de interfaces de usuario responsive</li>
+                <li>Implementación de diseños con CSS/SASS</li>
+                <li>Trabajo con equipos de diseño y marketing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section">
+      <div class="container">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul class="skills-list">
+              <li><span class="skill-name">HTML5/CSS3</span><span class="skill-bar" data-level="95"></span></li>
+              <li><span class="skill-name">JavaScript</span><span class="skill-bar" data-level="90"></span></li>
+              <li><span class="skill-name">React</span><span class="skill-bar" data-level="85"></span></li>
+              <li><span class="skill-name">Angular</span><span class="skill-bar" data-level="75"></span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul class="skills-list">
+              <li><span class="skill-name">Node.js</span><span class="skill-bar" data-level="85"></span></li>
+              <li><span class="skill-name">Express</span><span class="skill-bar" data-level="80"></span></li>
+              <li><span class="skill-name">Python</span><span class="skill-bar" data-level="75"></span></li>
+              <li><span class="skill-name">Java</span><span class="skill-bar" data-level="70"></span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Bases de Datos</h3>
+            <ul class="skills-list">
+              <li><span class="skill-name">MySQL</span><span class="skill-bar" data-level="80"></span></li>
+              <li><span class="skill-name">MongoDB</span><span class="skill-bar" data-level="75"></span></li>
+              <li><span class="skill-name">PostgreSQL</span><span class="skill-bar" data-level="70"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="certifications">
+      <div class="container">
+        <h2 class="section-title">Certificaciones</h2>
+        <div class="certifications-grid">
+          <div class="certification-card">
+            <img src="assets/images/cert-1.jpg" alt="Certificación Full Stack" loading="lazy">
+            <h3>Desarrollador Full Stack</h3>
+            <p>Platzi - 2022</p>
+          </div>
+          <div class="certification-card">
+            <img src="assets/images/cert-2.jpg" alt="Certificación React" loading="lazy">
+            <h3>React Avanzado</h3>
+            <p>Udemy - 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/cvuser" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/carlos_velasco?igsh=MjE5czNhZ2h4d3Fl" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" type="module"></script>
+  <script src="js/modules/scroll.js" type="module"></script>
+</body>
+</html>

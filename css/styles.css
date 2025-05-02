@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #1e1e2f;
+  --secondary-color: #ffda00;
+  --accent-color: #4a6fa5;
+  --text-color: #333;
+  --light-text: #f8f9fa;
+  --light-bg: #f0f2f5;
+  --white: #ffffff;
+  --gray-light: #e9ecef;
+  --gray-medium: #adb5bd;
+  --gray-dark: #495057;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  color: var(--primary-color);
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-color);
+  margin: 0.5rem auto 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* styles.css */
+@import url('./components/header.css');
+@import url('./components/footer.css');
+@import url('./components/cards.css');
+@import url('./components/buttons.css');
+@import url('./components/hero.css');
+@import url('./components/forms.css');
+/* Estilos específicos de páginas */
+.home-page main {
+  padding-top: 0;
+}
+
+.professional-page .timeline-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.sports-page .achievements-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.personal-page .story-generator {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.contact-page .contact-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width: 768px) {
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+}
