@@ -3,16 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Perfil profesional de Carlos Velasco García - Desarrollador Web Full Stack">
+  <meta name="description" content="Perfil profesional de Carlos Velasco García - Desarrollador Junior con Python y Java">
   <title>Carlos Velasco García | Perfil Profesional</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
   <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/components/header.css">
-    <link rel="stylesheet" href="css/components/footer.css">
-    <link rel="stylesheet" href="css/components/cards.css">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/components/hero.css">
-    <link rel="stylesheet" href="css/components/forms.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/cards.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/forms.css">
+  <style>
+    /* Estilos específicos para el visor de PDF */
+    .pdf-viewer-container {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .pdf-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .pdf-controls button {
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .pdf-controls button:hover {
+      background: var(--secondary-color);
+    }
+    
+    /* Ajustes para la línea de tiempo */
+    .timeline-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Ajustes para las habilidades */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+  </style>
 </head>
 <body class="professional-page">
   <header class="main-header">
@@ -34,38 +89,73 @@
   <main>
     <section class="professional-hero">
       <div class="container">
-        <h1>Perfil Profesional</h1>
-        <p>Desarrollador Web con más de 5 años de experiencia creando soluciones digitales</p>
+        <h1>Carlos Velasco García</h1>
+        <p>Programador Junior con Python y Java | Desarrollo de Aplicaciones Web y Multiplataforma</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-title">Acerca de Mí</h2>
+        <div class="about-content">
+          <p>Soy un estudiante apasionado por la programación, siempre buscando aprender y mejorar. Valoro los consejos de profesionales experimentados y disfruto del trabajo en equipo. Estoy comprometido con mi crecimiento personal y profesional.</p>
+          
+          <div class="quick-info">
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>654 658 492</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>c2003velasco@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Oviedo, Asturias</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="timeline-section">
       <div class="container">
-        <h2 class="section-title">Experiencia Laboral</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">2021 - Presente</div>
-            <div class="timeline-content">
-              <h3>Desarrollador Full Stack</h3>
-              <h4>Empresa Tecnológica XYZ</h4>
-              <ul>
-                <li>Desarrollo de aplicaciones web con React y Node.js</li>
-                <li>Implementación de APIs RESTful</li>
-                <li>Optimización de rendimiento frontend</li>
-              </ul>
-            </div>
+        <h2 class="section-title">Educación y Experiencia</h2>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2024 - Presente</div>
+          <div class="timeline-content">
+            <h3>Programador Python para IA</h3>
+            <h4>Escuela de Organización Industrial</h4>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2019 - 2021</div>
-            <div class="timeline-content">
-              <h3>Desarrollador Frontend</h3>
-              <h4>Agencia Digital ABC</h4>
-              <ul>
-                <li>Creación de interfaces de usuario responsive</li>
-                <li>Implementación de diseños con CSS/SASS</li>
-                <li>Trabajo con equipos de diseño y marketing</li>
-              </ul>
-            </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2024 - 2025</div>
+          <div class="timeline-content">
+            <h3>Técnico en Desarrollo de Aplicaciones Web</h3>
+            <h4>CIFP La Laboral, Gijón</h4>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - 2023</div>
+          <div class="timeline-content">
+            <h3>Prácticas Profesionales</h3>
+            <h4>DXC Technology, Avilés</h4>
+            <ul>
+              <li>Desarrollo de aplicaciones empresariales</li>
+              <li>Trabajo en equipo con metodologías ágiles</li>
+              <li>Implementación de soluciones tecnológicas</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2023</div>
+          <div class="timeline-content">
+            <h3>Técnico en Desarrollo de Aplicaciones Multiplataforma</h3>
+            <h4>IES Doctor Fleming, Oviedo</h4>
           </div>
         </div>
       </div>
@@ -76,48 +166,85 @@
         <h2 class="section-title">Habilidades Técnicas</h2>
         <div class="skills-grid">
           <div class="skill-category">
+            <h3>Lenguajes de Programación</h3>
+            <ul class="skills-list">
+              <li><span class="skill-name">Python</span><span class="skill-bar" data-level="80"></span></li>
+              <li><span class="skill-name">Java</span><span class="skill-bar" data-level="75"></span></li>
+              <li><span class="skill-name">JavaScript</span><span class="skill-bar" data-level="70"></span></li>
+              <li><span class="skill-name">PHP</span><span class="skill-bar" data-level="65"></span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
             <h3>Frontend</h3>
             <ul class="skills-list">
-              <li><span class="skill-name">HTML5/CSS3</span><span class="skill-bar" data-level="95"></span></li>
-              <li><span class="skill-name">JavaScript</span><span class="skill-bar" data-level="90"></span></li>
-              <li><span class="skill-name">React</span><span class="skill-bar" data-level="85"></span></li>
-              <li><span class="skill-name">Angular</span><span class="skill-bar" data-level="75"></span></li>
+              <li><span class="skill-name">HTML5/CSS3</span><span class="skill-bar" data-level="80"></span></li>
+              <li><span class="skill-name">Bootstrap</span><span class="skill-bar" data-level="75"></span></li>
+              <li><span class="skill-name">React.js</span><span class="skill-bar" data-level="65"></span></li>
             </ul>
           </div>
           <div class="skill-category">
-            <h3>Backend</h3>
+            <h3>Otras Tecnologías</h3>
             <ul class="skills-list">
-              <li><span class="skill-name">Node.js</span><span class="skill-bar" data-level="85"></span></li>
-              <li><span class="skill-name">Express</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">Python</span><span class="skill-bar" data-level="75"></span></li>
-              <li><span class="skill-name">Java</span><span class="skill-bar" data-level="70"></span></li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Bases de Datos</h3>
-            <ul class="skills-list">
-              <li><span class="skill-name">MySQL</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">MongoDB</span><span class="skill-bar" data-level="75"></span></li>
-              <li><span class="skill-name">PostgreSQL</span><span class="skill-bar" data-level="70"></span></li>
+              <li><span class="skill-name">Android Studio</span><span class="skill-bar" data-level="70"></span></li>
+              <li><span class="skill-name">Git/GitHub</span><span class="skill-bar" data-level="75"></span></li>
+              <li><span class="skill-name">Laravel</span><span class="skill-bar" data-level="60"></span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="certifications">
+    <section class="languages-section">
       <div class="container">
-        <h2 class="section-title">Certificaciones</h2>
-        <div class="certifications-grid">
-          <div class="certification-card">
-            <img src="assets/images/cert-1.jpg" alt="Certificación Full Stack" loading="lazy">
-            <h3>Desarrollador Full Stack</h3>
-            <p>Platzi - 2022</p>
+        <h2 class="section-title">Idiomas</h2>
+        <div class="languages-grid">
+          <div class="language-item">
+            <h3>Inglés</h3>
+            <p>Nivel B2 certificado por Cambridge (FCE)</p>
+            <p>Actualmente cursando C1.2 en la Escuela Oficial de Idiomas (EOI)</p>
           </div>
-          <div class="certification-card">
-            <img src="assets/images/cert-2.jpg" alt="Certificación React" loading="lazy">
-            <h3>React Avanzado</h3>
-            <p>Udemy - 2021</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pdf-section">
+      <div class="container">
+        <h2 class="section-title">Mi Currículum</h2>
+        <div class="pdf-controls">
+          <button id="prev-page"><i class="fas fa-arrow-left"></i> Anterior</button>
+          <span id="page-num">Página 1 de 1</span>
+          <button id="next-page">Siguiente <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="pdf-viewer-container">
+          <canvas id="pdf-canvas"></canvas>
+        </div>
+        <div class="download-btn">
+          <a href="assets/docs/Curriculum-Carlos_Velasco_García.pdf" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Descargar Currículum Completo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="additional-info">
+      <div class="container">
+        <h2 class="section-title">Datos de Interés</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-car"></i>
+            <h3>Carné de conducir y vehículo propio</h3>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Movilidad geográfica</h3>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>Fecha de nacimiento: 06/02/2003</h3>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-user-tie"></i>
+            <h3>Inscrito en el programa de garantía juvenil</h3>
           </div>
         </div>
       </div>
@@ -128,14 +255,109 @@
     <div class="footer-container">
       <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/cvuser" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/carlos_velasco?igsh=MjE5czNhZ2h4d3Fl" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </footer>
 
+  <!-- PDF.js Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
   <script src="js/main.js" type="module"></script>
-  <script src="js/modules/scroll.js" type="module"></script>
+  
+  <script>
+    // Configuración del visor de PDF
+    document.addEventListener('DOMContentLoaded', () => {
+      // Establecer la URL del PDF
+      const pdfUrl = 'assets//pdfs//cv.pdf';
+      
+      // Configurar PDF.js
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+      
+      let pdfDoc = null,
+          pageNum = 1,
+          pageRendering = false,
+          pageNumPending = null,
+          scale = 1.5,
+          canvas = document.getElementById('pdf-canvas'),
+          ctx = canvas.getContext('2d');
+      
+      // Función para renderizar la página
+      function renderPage(num) {
+        pageRendering = true;
+        
+        pdfDoc.getPage(num).then(function(page) {
+          const viewport = page.getViewport({ scale: scale });
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          
+          const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+          };
+          
+          const renderTask = page.render(renderContext);
+          
+          renderTask.promise.then(function() {
+            pageRendering = false;
+            if (pageNumPending !== null) {
+              renderPage(pageNumPending);
+              pageNumPending = null;
+            }
+          });
+        });
+        
+        document.getElementById('page-num').textContent = `Página ${num} de ${pdfDoc.numPages}`;
+      }
+      
+      // Función para ir a la página anterior
+      function onPrevPage() {
+        if (pageNum <= 1) return;
+        pageNum--;
+        queueRenderPage(pageNum);
+      }
+      
+      // Función para ir a la página siguiente
+      function onNextPage() {
+        if (pageNum >= pdfDoc.numPages) return;
+        pageNum++;
+        queueRenderPage(pageNum);
+      }
+      
+      // Función para encolar la renderización de la página
+      function queueRenderPage(num) {
+        if (pageRendering) {
+          pageNumPending = num;
+        } else {
+          renderPage(num);
+        }
+      }
+      
+      // Cargar el PDF
+      pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc_) {
+        pdfDoc = pdfDoc_;
+        document.getElementById('page-num').textContent = `Página 1 de ${pdfDoc.numPages}`;
+        renderPage(pageNum);
+      }).catch(function(error) {
+        console.error('Error al cargar el PDF:', error);
+        document.querySelector('.pdf-viewer-container').innerHTML = `
+          <div class="pdf-error">
+            <p>No se pudo cargar el PDF. Por favor, descárgalo directamente:</p>
+            <a href="${pdfUrl}" download class="btn btn-primary">
+              <i class="fas fa-download"></i> Descargar Currículum
+            </a>
+          </div>
+        `;
+      });
+      
+      // Event listeners para los botones
+      document.getElementById('prev-page').addEventListener('click', onPrevPage);
+      document.getElementById('next-page').addEventListener('click', onNextPage);
+      
+      // Actualizar año en el footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>

@@ -93,3 +93,4 @@ if (document.getElementById('sports-video')) {
     .then(module => module.initVideoPlayer())
     .catch(err => console.error('Error loading video module:', err));
 }
+
