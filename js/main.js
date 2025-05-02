@@ -87,3 +87,9 @@ function loadPageSpecificModules() {
     .then(module => module.initThemeSwitcher())
     .catch(err => console.error('Error loading theme module:', err));
 }
+// Cargar módulo de video si existe en la página
+if (document.getElementById('sports-video')) {
+  import('./modules/video.js')
+    .then(module => module.initVideoPlayer())
+    .catch(err => console.error('Error loading video module:', err));
+}
