@@ -1,0 +1,33 @@
+.quick-menu {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  
+  .quick-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .quick-link {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid #dcdcdc;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-link:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  

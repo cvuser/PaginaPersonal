@@ -94,3 +94,12 @@ if (document.getElementById('sports-video')) {
     .catch(err => console.error('Error loading video module:', err));
 }
 
+// js/main.js
+import { initThemeSwitcher } from './modules/theme.js';
+
+// Inicializar el tema
+document.addEventListener('DOMContentLoaded', () => {
+  initThemeSwitcher();
+  
+  // Resto de tu código de inicialización...
+});

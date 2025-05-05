@@ -46,3 +46,19 @@
       width: 100%;
     }
   }
+  .btn-fancy {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-fancy:hover {
+    background: linear-gradient(135deg, #5a75f3, #8f5cd6);
+    transform: scale(1.05);
+  }
+  
