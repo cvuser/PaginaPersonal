@@ -1,17 +1,30 @@
 :root {
+  /* Colores para modo claro */
   --primary-color: #1e1e2f;
   --secondary-color: #ffda00;
   --accent-color: #4a6fa5;
-  --text-color: #333;
+  --text-color: #333333;
   --light-text: #f8f9fa;
   --light-bg: #f0f2f5;
   --white: #ffffff;
   --gray-light: #e9ecef;
   --gray-medium: #adb5bd;
   --gray-dark: #495057;
+  
+  /* Nueva paleta para modo oscuro */
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-primary: #bb86fc;
+  --dark-secondary: #03dac6;
+  --dark-error: #cf6679;
+  --dark-text: #e1e1e1;
+  --dark-text-secondary: #a0a0a0;
+  
+  /* Variables compartidas */
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
   --border-radius: 8px;
+  --header-height: 70px;
 }
 
 * {
@@ -22,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -32,6 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -43,6 +58,7 @@ body {
 
 section {
   padding: 4rem 0;
+  scroll-margin-top: var(--header-height);
 }
 
 .section-title {
@@ -66,59 +82,38 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-/* Reproductor de video */
-.video-wrapper {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #000;
   border-radius: var(--border-radius);
-  overflow: hidden;
 }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  overflow: hidden;
+/* 🌙 MODO OSCURO MEJORADO */
+.dark-theme {
+  --primary-color: var(--dark-primary);
+  --secondary-color: var(--dark-secondary);
+  --accent-color: var(--dark-secondary);
+  --text-color: var(--dark-text);
+  --light-text: var(--dark-text);
+  --light-bg: var(--dark-bg);
+  --white: var(--dark-surface);
+  --gray-light: #2a2a2a;
+  --gray-medium: #555555;
+  --gray-dark: #777777;
 }
 
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+.dark-theme body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .video-wrapper {
-    margin: 1rem auto;
-    border-radius: 0;
-  }
+.dark-theme .section-title {
+  color: var(--dark-primary);
+}
 
-  .video-container {
-    padding-bottom: 56.25%;
-  }
+.dark-theme .section-title::after {
+  background: var(--dark-secondary);
+}
 
-  video {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  video::-webkit-media-controls {
-    display: flex !important;
-  }
-
-  video::-webkit-media-controls-enclosure {
-    width: 100%;
-  }
-
-  section {
-    padding: 2rem 0;
-  }
+.dark-theme img {
+  filter: brightness(0.9);
 }
 
 /* Importación de componentes */
@@ -128,76 +123,4 @@ img {
 @import url('./components/buttons.css');
 @import url('./components/hero.css');
 @import url('./components/forms.css');
-
-/* 🌙 MODO OSCURO */
-.dark-theme {
-  background-color: #121212;
-  color: var(--light-text);
-}
-
-.dark-theme body,
-.dark-theme main,
-.dark-theme section,
-.dark-theme .container {
-  background-color: #121212;
-  color: var(--light-text);
-}
-
-.dark-theme .achievement-card,
-.dark-theme .gallery-item,
-.dark-theme .video-container {
-  background-color: #1e1e2f;
-  color: var(--light-text);
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .hero {
-  color: var(--light-text);
-}
-
-.dark-theme .section-title {
-  color: var(--secondary-color);
-}
-
-.dark-theme .section-title::after {
-  background: var(--accent-color);
-}
-
-.dark-theme .main-footer {
-  background-color: #1a1a2e;
-  color: var(--light-text);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .card {
-  background-color: #252542;
-  color: var(--light-text);
-  border: 1px solid #333;
-}
-
-.dark-theme a,
-.dark-theme a:visited {
-  color: var(--secondary-color);
-}
-
-.dark-theme .btn,
-.dark-theme .btn-primary,
-.dark-theme .btn-fancy {
-  background-color: var(--accent-color);
-  color: var(--white);
-}
-
-.dark-theme .btn:hover {
-  filter: brightness(1.1);
-}
-.pdf-viewer-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.pdf-viewer-wrapper embed {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+@import url('./components/quickmenu.css');
