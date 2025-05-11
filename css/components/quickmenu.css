@@ -1,32 +1,77 @@
+/* components/quickmenu.css */
 .quick-menu {
-    background-color: #f8f8f8;
-    padding: 20px 0;
-    margin-top: 30px;
-  }
-  
+  background-color: var(--light-bg);
+  padding: 1.5rem 0;
+  margin: 3rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quick-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.quick-link {
+  text-decoration: none;
+  background-color: var(--white);
+  color: var(--text-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--gray-light);
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  box-shadow: var(--card-shadow);
+}
+
+.quick-link:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quick-link i {
+  font-size: 1.1rem;
+}
+
+/* Estilos para modo oscuro */
+.dark-theme .quick-menu {
+  background-color: var(--dark-surface);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .quick-link {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .quick-link:hover {
+  background-color: var(--dark-primary);
+  color: var(--dark-bg);
+  border-color: var(--dark-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .quick-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 15px;
+    flex-direction: column;
+    align-items: center;
   }
   
   .quick-link {
-    text-decoration: none;
-    background-color: #ffffff;
-    color: #333;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: 2px solid #dcdcdc;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
   }
-  
-  .quick-link:hover {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-  }
+}
