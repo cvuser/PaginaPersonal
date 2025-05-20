@@ -43,8 +43,12 @@
   background-color: var(--dark-surface);
 }
 
-.dark-theme .social-links a:hover {
+.dark-theme .social-links a {
   color: var(--dark-primary);
+}
+
+.dark-theme .social-links a:hover {
+  color: var(--dark-secondary);
 }
 
 @media (min-width: 768px) {

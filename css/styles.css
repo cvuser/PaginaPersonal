@@ -1,30 +1,44 @@
 :root {
-  /* Colores para modo claro */
-  --primary-color: #1e1e2f;
-  --secondary-color: #ffda00;
-  --accent-color: #4a6fa5;
-  --text-color: #333333;
-  --light-text: #f8f9fa;
-  --light-bg: #f0f2f5;
+  /* Paleta para modo claro */
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #34495e;
+  --light-text: #ecf0f1;
+  --light-bg: #f5f7fa;
   --white: #ffffff;
-  --gray-light: #e9ecef;
-  --gray-medium: #adb5bd;
-  --gray-dark: #495057;
-  
-  /* Nueva paleta para modo oscuro */
-  --dark-bg: #121212;
-  --dark-surface: #1e1e1e;
-  --dark-primary: #bb86fc;
-  --dark-secondary: #03dac6;
-  --dark-error: #cf6679;
-  --dark-text: #e1e1e1;
-  --dark-text-secondary: #a0a0a0;
-  
-  /* Variables compartidas */
+  --gray-light: #dfe6e9;
+  --gray-medium: #bdc3c7;
+  --gray-dark: #7f8c8d;
+
+  /* Paleta modo oscuro */
+  --dark-bg: #121a24;
+  --dark-surface: #1e2a3a;
+  --dark-primary: #4d9be6;
+  --dark-secondary: #3ab795;
+  --dark-accent: #e74c3c;
+  --dark-text: #e1e5eb;
+  --dark-text-secondary: #8a9fb5;
+  --dark-border: #2a3a4d;
+
+  /* Compartidas */
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
   --border-radius: 8px;
   --header-height: 70px;
+}
+
+.dark-theme {
+  --primary-color: var(--dark-primary);
+  --secondary-color: var(--dark-secondary);
+  --accent-color: var(--dark-accent);
+  --text-color: var(--dark-text);
+  --light-text: var(--dark-text);
+  --light-bg: var(--dark-bg);
+  --white: var(--dark-surface);
+  --gray-light: var(--dark-border);
+  --gray-medium: #3a4d66;
+  --gray-dark: var(--dark-text-secondary);
 }
 
 * {
@@ -68,7 +82,6 @@ section {
   position: relative;
   color: var(--primary-color);
 }
-
 .section-title::after {
   content: '';
   display: block;
@@ -85,35 +98,140 @@ img {
   border-radius: var(--border-radius);
 }
 
-/* 🌙 MODO OSCURO MEJORADO */
-.dark-theme {
-  --primary-color: var(--dark-primary);
-  --secondary-color: var(--dark-secondary);
-  --accent-color: var(--dark-secondary);
-  --text-color: var(--dark-text);
-  --light-text: var(--dark-text);
-  --light-bg: var(--dark-bg);
-  --white: var(--dark-surface);
-  --gray-light: #2a2a2a;
-  --gray-medium: #555555;
-  --gray-dark: #777777;
+/* Centrado de secciones */
+.skills-section,
+.timeline-section,
+.additional-info,
+.languages-section {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.dark-theme body {
-  background-color: var(--dark-bg);
+/* Social buttons */
+.social-contact {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  font-size: 1.2rem;
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.social-link:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.dark-theme .social-link {
+  background-color: var(--dark-secondary);
   color: var(--dark-text);
 }
-
-.dark-theme .section-title {
-  color: var(--dark-primary);
+.dark-theme .social-link:hover {
+  background-color: var(--dark-primary);
 }
 
-.dark-theme .section-title::after {
-  background: var(--dark-secondary);
+/* Responsive social buttons */
+@media (max-width: 768px) {
+  .social-contact {
+    gap: 1rem;
+  }
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
 }
 
-.dark-theme img {
-  filter: brightness(0.9);
+/* Timeline y quick-info */
+.timeline-content,
+.quickquick-info {
+  color: #48505a;
+}
+
+/* Call button */
+.call-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  transition: var(--transition);
+}
+.call-button:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+.dark-theme .call-button {
+  background-color: var(--dark-secondary);
+  color: var(--dark-text);
+}
+.dark-theme .call-button:hover {
+  background-color: var(--dark-primary);
+}
+
+/* Skills list */
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.skills-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+.dark-theme .skills-list li::before {
+  color: var(--dark-secondary);
+}
+
+/* Skill bars */
+.skill-name {
+  display: inline-block;
+  min-width: 120px;
+  margin-right: 0.5rem;
+}
+.skill-bar {
+  display: inline-block;
+  width: 150px;
+  height: 8px;
+  background-color: var(--gray-light);
+  border-radius: 4px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.skill-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+.dark-theme .skill-bar {
+  background-color: var(--dark-border);
+}
+.dark-theme .skill-bar::after {
+  background-color: var(--dark-secondary);
 }
 
 /* Importación de componentes */

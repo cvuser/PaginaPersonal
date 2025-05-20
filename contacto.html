@@ -6,15 +6,15 @@
   <meta name="description" content="Formulario de contacto de Carlos Velasco García">
   <title>Carlos Velasco García | Contacto</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Solo necesitas importar styles.css, que ya importa todos los componentes -->
+ <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components/header.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/cards.css">
   <link rel="stylesheet" href="css/components/buttons.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/forms.css">
-  <link rel="stylesheet" href="css/components/quickmenu.css" />
-</head>
+  <link rel="stylesheet" href="css/components/quickmenu.css" /></head>
 <body class="contact-page">
   <header class="main-header">
     <div class="header-container">
@@ -39,14 +39,13 @@
       </div>
     </section>
 
-    <!-- Menú rápido añadido -->
-  <section class="quick-menu">
-    <div class="quick-container">
-      <a href="profesional.html" class="quick-link"><i class="fas fa-laptop-code"></i> Profesional</a>
-      <a href="personal.html" class="quick-link"><i class="fas fa-star"></i> Personal</a>
-      <a href="contacto.html" class="quick-link"><i class="fas fa-paper-plane"></i> Contacto</a>
-    </div>
-  </section>
+    <section class="quick-menu">
+      <div class="quick-container">
+        <a href="profesional.html" class="quick-link"><i class="fas fa-laptop-code"></i> Profesional</a>
+        <a href="personal.html" class="quick-link"><i class="fas fa-star"></i> Personal</a>
+        <a href="contacto.html" class="quick-link"><i class="fas fa-paper-plane"></i> Contacto</a>
+      </div>
+    </section>
 
     <section class="contact-section">
       <div class="container">
@@ -54,27 +53,18 @@
           <div class="contact-info">
             <h2 class="section-title">Información de Contacto</h2>
             <ul class="info-list">
-              <li>
-                <i class="fas fa-envelope"></i>
-                <span>c2003velasco@gmail.com</span>
-              </li>
-              <li>
-                <i class="fas fa-phone"></i>
-                <span>+34 654 658 492</span>
-              </li>
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Oviedo, Asturias</span>
-              </li>
+              <li><i class="fas fa-envelope"></i><span>c2003velasco@gmail.com</span></li>
+              <li><i class="fas fa-phone"></i><span>+34 654 658 492</span></li>
+              <li><i class="fas fa-map-marker-alt"></i><span>Oviedo, Asturias</span></li>
             </ul>
             <div class="social-contact">
-              <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" rel="noopener" class="social-link">
+              <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="https://github.com/cvuser" target="_blank" rel="noopener" class="social-link">
+              <a href="https://github.com/cvuser" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="https://www.instagram.com/carlos_velasco?igsh=MjE5czNhZ2h4d3Fl" target="_blank" rel="noopener" class="social-link">
+              <a href="https://www.instagram.com/carlos_velasco?igsh=MjE5czNhZ2h4d3Fl" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>

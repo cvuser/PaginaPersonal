@@ -5,40 +5,7 @@
   margin-top: 2rem;
 }
 
-.card {
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2rem;
-  transition: var(--transition);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card-icon {
-  font-size: 2.5rem;
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-}
-
-.card p {
-  color: var(--gray-dark);
-}
-
+.card,
 .achievement-card {
   background-color: var(--white);
   border-radius: var(--border-radius);
@@ -48,15 +15,36 @@
   transition: var(--transition);
 }
 
-.achievement-card:hover {
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.card:hover,
+.achievement-card:hover,
+.gallery-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+.card-icon,
 .achievement-icon {
   font-size: 2.5rem;
   color: var(--secondary-color);
   margin-bottom: 1rem;
+}
+
+.card h3,
+.achievement-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.card p {
+  color: var(--gray-dark);
 }
 
 .gallery-grid {
@@ -72,11 +60,6 @@
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
   transition: var(--transition);
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
@@ -102,6 +85,7 @@
   font-size: 0.9rem;
 }
 
+/* Modo oscuro */
 .dark-theme .card,
 .dark-theme .achievement-card,
 .dark-theme .gallery-item {
