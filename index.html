@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
 </head>
 <body class="home-page">
   <header class="main-header">
@@ -36,18 +37,32 @@
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Carlos Velasco García</h1>
-        <p class="hero-subtitle">Desarrollador Web Full Stack</p>
-        <div class="cta-buttons">
-          <a href="profesional.html" class="btn btn-primary">Mi Perfil Profesional</a>
-          <a href="personal.html" class="btn btn-fancy">Un poco más sobre mí</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/images/Carlos.jpeg" alt="Carlos Velasco García" loading="lazy" />
-      </div>
-    </section>
+  <div class="hero-content" style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 55vh;
+    text-align: center;
+    margin: 2.5rem auto 2rem auto;
+    max-width: 600px;
+    padding: 2.5rem 2rem;
+    position: relative;
+  ">
+    <h1 class="hero-title">Carlos Velasco García</h1>
+    <span id="typed-greeting" style="display:block;font-size:1.3rem;color: greenyellow;margin-bottom:1rem;"></span>
+    <p class="hero-subtitle" style="align-self: flex-start; text-align: left;">
+      Dev Web &amp; Data Migration
+    </p>
+    <div class="cta-buttons">
+      <a href="profesional.html" class="btn btn-primary">Mi Perfil Profesional</a>
+      <a href="personal.html" class="btn btn-fancy">Un poco más sobre mí</a>
+    </div>
+  </div>
+  <div class="hero-image" style="display: flex; align-items: center; justify-content: center;">
+    <img src="assets/images/gif.gif" alt="Carlos Velasco García" loading="lazy" />
+  </div>
+</section>
 
     <!-- MENÚ RÁPIDO -->
     <section class="quick-menu">
@@ -83,16 +98,57 @@
   </main>
 
   <footer class="main-footer">
-    <div class="footer-container">
-      <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/cvuser" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
+  <div class="footer-container">
+    <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/cvuser" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
   <script src="js/main.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Efecto Typed.js para saludo animado
+    if (document.getElementById('typed-greeting')) {
+      new Typed('#typed-greeting', {
+        strings: [
+          "¡Hola! Welcome! 👋",
+          "Bienvenido/a a mi Página Personal",
+          "Soy Carlos Velasco García",
+          "Desarrollador Web Full Stack",
+          "¡Explora y conoce mi trabajo!"
+        ],
+        typeSpeed: 55,
+        backSpeed: 30,
+        backDelay: 1200,
+        startDelay: 400,
+        loop: true,
+        showCursor: false
+      });
+    }
+
+    // Saludo basado en la hora
+const greeting = document.getElementById('typed-greeting');
+if (greeting) {
+  const hour = new Date().getHours();
+  let saludo = "¡Hola!";
+  if(hour < 12) saludo = "¡Buenos días!";
+  else if(hour < 20) saludo = "¡Buenas tardes!";
+  else saludo = "¡Buenas noches!";
+  greeting.insertAdjacentHTML('beforebegin', `<span style="color:#FABADA;font-size:1.1rem;">${saludo}</span>`);
+}
+
+// Parallax effect for hero image
+const heroImg = document.querySelector('.hero-image img');
+window.addEventListener('scroll', () => {
+  if(heroImg){
+    heroImg.style.transform = `translateY(${window.scrollY * 0.08}px)`;
+  }
+});
+  </script>
 </body>
 </html>

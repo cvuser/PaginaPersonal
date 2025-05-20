@@ -11,20 +11,16 @@
   --gray-medium: #bdc3c7;
   --gray-dark: #7f8c8d;
 
-  /* Paleta modo oscuro */
-  --dark-bg: #121a24;
-  --dark-surface: #1e2a3a;
-  --dark-primary: #4d9be6;
-  --dark-secondary: #3ab795;
-  --dark-accent: #e74c3c;
-  --dark-text: #e1e5eb;
-  --dark-text-secondary: #8a9fb5;
-  --dark-border: #2a3a4d;
+  /* Paleta modo oscuro NUEVA */
+  --dark-bg: #181c24;
+  --dark-surface: #232a36;
+  --dark-primary: #7f5af0;
+  --dark-secondary: #2cb67d;
+  --dark-accent: #ff8906;
+  --dark-text: #f5f7fa;
+  --dark-text-secondary: #a5b6cf;
+  --dark-border: #222831;
 
-  /* Compartidas */
-  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-  --border-radius: 8px;
   --header-height: 70px;
 }
 
@@ -37,7 +33,7 @@
   --light-bg: var(--dark-bg);
   --white: var(--dark-surface);
   --gray-light: var(--dark-border);
-  --gray-medium: #3a4d66;
+  --gray-medium: #393e46;
   --gray-dark: var(--dark-text-secondary);
 }
 

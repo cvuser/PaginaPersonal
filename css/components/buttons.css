@@ -13,7 +13,9 @@
   gap: 0.5rem;
   font-family: 'Poppins', sans-serif;
 }
-
+@keyframes bounce {
+  to { transform: translateY(-6px); }
+}
 .btn-primary,
 .btn-secondary {
   transition: var(--transition);
