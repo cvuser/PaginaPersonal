@@ -33,13 +33,23 @@
   </header>
 
   <main>
-    <section class="sports-hero">
-      <div class="container">
-        <h1>Perfil Deportivo</h1>
-        <p>Pasión por el fútbol y el deporte como estilo de vida</p>
+    <!-- Video principal destacado al inicio -->
+    <section class="sports-video" style="background: var(--light-bg); padding: 4rem 0 3rem 0;">
+      <div class="container" style="max-width:1200px;">
+        <h1 class="section-title" style="text-align:center; font-size:2.7rem; margin-bottom:2.5rem;">Mejores Jugadas - Temporada 2024/2025</h1>
+        <div class="video-container" style="max-width: 1100px; margin: 0 auto;">
+          <video controls controlsList="nodownload" width="100%" height="600" style="background: #000; border-radius: 18px; box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+            <source src="./assets/videos/TOPT.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+          <div class="video-description" style="text-align:center; margin-top:2rem;">
+            <p style="font-size:1.35rem;">Compilación de las mejores jugadas y goles de la temporada 2024/2025</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Logros Deportivos -->
     <section class="achievements">
       <div class="container">
         <h2 class="section-title">Logros Deportivos</h2>
@@ -69,6 +79,7 @@
       </div>
     </section>
 
+    <!-- Galería Deportiva -->
     <section class="sports-gallery">
       <div class="container">
         <h2 class="section-title">Galería Deportiva</h2>
@@ -85,22 +96,6 @@
             <img src="https://rfef.es/sites/default/files/styles/noticias_image_content/public/n/2023-03-20_entrenamiento_seleccion_29.jpg.webp?itok=YQgyTGQA" alt="Entrenamiento" loading="lazy">
             <figcaption>Sesión de entrenamiento</figcaption>
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="sports-video">
-      <div class="container">
-        <h2 class="section-title">Video Destacado</h2>
-        <div class="video-container" style="max-width: 800px; margin: 0 auto;">
-          <video controls controlsList="nodownload" width="100%" style="background: #000;">
-            <source src="./assets/videos/TOPT.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-          </video>
-          <div class="video-description">
-            <h3>Mejores Jugadas - Temporada 2024/2025</h3>
-            <p>Compilación de las mejores jugadas y goles de la temporada 2024/2025</p>
-          </div>
         </div>
       </div>
     </section>

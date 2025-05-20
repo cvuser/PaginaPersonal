@@ -58,8 +58,44 @@
         </div>
       </div>
     </section>
+    
+    <section class="curiosities-interactive" style="background: var(--light-bg); padding: 3rem 0;">
+      <div class="container" style="max-width:700px;margin:auto;">
+        <h2 class="section-title" style="text-align:center;">Descubre una curiosidad sobre mí</h2>
+        <div id="curiosity-box" style="border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:2rem;text-align:center;min-height:80px;font-size:1.15rem;transition:box-shadow .2s;">
+          Haz clic en el botón para descubrir una curiosidad 👇
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 2rem;">
+          <button id="curiosity-btn" class="btn btn-fancy">
+            <i class="fas fa-lightbulb"></i> ¡Muéstrame una curiosidad!
+          </button>
+        </div>
+      </div>
+    </section>
 
- 
+<script>
+  const curiosities = [
+    "🎮 Me encanta jugar a videojuegos donde sea importante el factor estratégico.",
+    "⚽ He sido capitán de mi equipo de fútbol 7 durante esta temporada.",
+    "💡 Soy curioso con los proyectos antiguos, para entender el funcionamiento de años anteriores.",
+    "📚 Siempre me quedo enganchado viendo películas de ciencia ficción.",
+    "🎧 Escucho música lo-fi cuando trabajo para concentrarme mejor.",
+    "🧩 Siempre intento ver las peliculas en VOSE."
+  ];
+  const curiosityBox = document.getElementById('curiosity-box');
+  const curiosityBtn = document.getElementById('curiosity-btn');
+  let lastIndex = -1;
+  curiosityBtn.addEventListener('click', () => {
+    let idx;
+    do {
+      idx = Math.floor(Math.random() * curiosities.length);
+    } while (idx === lastIndex && curiosities.length > 1);
+    curiosityBox.textContent = curiosities[idx];
+    lastIndex = idx;
+    curiosityBox.style.boxShadow = "0 4px 16px rgba(44,62,80,0.12)";
+  });
+</script>
+  
 
     <section class="personal-gallery">
       <div class="container">
@@ -67,15 +103,15 @@
         <div class="gallery-grid">
           <figure class="gallery-item">
             <img src="https://www.japonalternativo.com/wp-content/uploads/2024/10/vuelos-directos-a-japon-desde-espana.jpg" alt="Carlos viajando a Japón" loading="lazy">
-            <figcaption>Viaje a Japón, 2022</figcaption>
+            <figcaption style="color: aliceblue;">Viaje a Japón, 2022</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img src="https://i.imgur.com/YZtYlQq.jpg" alt="Sesión cooperativa de videojuegos" loading="lazy">
-            <figcaption>Setup 2025</figcaption>
+            <img src="https://i.imgur.com/YZtYlQq.jpg" alt="En montaje actualmente... (dentro de poco)" loading="lazy">
+            <figcaption style="color: aliceblue;">Setup 2025</figcaption>
           </figure>
           <figure class="gallery-item">
-            <img src="./assets/images/Equipo.jpg" alt="Reunión social tranquila" loading="lazy">
-            <figcaption>Nuestro primer proyecto</figcaption>
+            <img src="./assets/images/Equipo.jpg" alt="Nuestro equipo" loading="lazy">
+            <figcaption style="color: aliceblue;">Nuestro primer proyecto</figcaption>
           </figure>
         </div>
       </div>
