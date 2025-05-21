@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="css/components/forms.css">
   <link rel="stylesheet" href="css/components/quickmenu.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <style>
     /* Estilos específicos para el visor de PDF */
     .pdf-viewer-container {
@@ -48,21 +50,6 @@
       background: var(--secondary-color);
     }
     
-    /* Ajustes para la línea de tiempo */
-    .timeline-item {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 1.5rem;
-    }
-    
-    .timeline-date {
-      font-weight: bold;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-    
     /* Ajustes para las habilidades */
     .skills-grid {
       display: grid;
@@ -70,6 +57,22 @@
       gap: 2rem;
     }
   </style>
+  
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
+
 </head>
 <body class="professional-page">
   <header class="main-header">
@@ -135,53 +138,63 @@
     </section>
 
     <section class="timeline-section">
-      <div class="container">
-        <h2 class="section-title">Educación y Experiencia</h2>
+  <div class="container">
+    <h2 class="section-title">Educación y Experiencia</h2>
+    <div class="timeline">
 
-        <div class="timeline-item">
-          <div class="timeline-date">02/2025 - Actualidad</div>
-          <div class="timeline-content">
-            <h3>Metadata Processing Technician</h3>
-            <h4>Applus+, Parque Tecnológico Llanera</h4>
-            <li>Preparación de metadatos para la migración de BBDD</li>
-            <li>Filtración de documentos</li>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">09/2024 - 01/2025</div>
-          <div class="timeline-content">
-            <h3>Programador Python para IA</h3>
-            <h4>Escuela de Organización Industrial</h4>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">09/2024 - Actualidad</div>
-          <div class="timeline-content">
-            <h3>Técnico en Desarrollo de Aplicaciones Web</h3>
-            <h4>CIFP La Laboral, Gijón</h4>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">03/2023 - 06/2023</div>
-          <div class="timeline-content">
-            <h3>Prácticas Profesionales</h3>
-            <h4>DXC Technology, Avilés</h4>
-         
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">09/2021 - 06/2023</div>
-          <div class="timeline-content">
-            <h3>Técnico en Desarrollo de Aplicaciones Multiplataforma</h3>
-            <h4>IES Doctor Fleming, Oviedo</h4>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">02/2025 - Actualidad</div>
+        <div class="timeline-content">
+          <h3 >Metadata Processing Technician</h3>
+          <h4>Applus+, Parque Tecnológico Llanera</h4>
+          <ul>
+            <p>Preparación de metadatos para migración de BBDD.</p>
+            <p>Filtración de documentos.</p>
+          </ul>
         </div>
       </div>
-    </section>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">09/2024 - Actualidad</div>
+        <div class="timeline-content">
+          <h3>Técnico en DAW</h3>
+          <h4>CIFP La Laboral, Gijón</h4>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">09/2024 - 01/2025</div>
+        <div class="timeline-content">
+          <h3>Programador Python para IA</h3>
+          <h4>Escuela de Organización Industrial</h4>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">03/2023 - 06/2023</div>
+        <div class="timeline-content">
+          <h3>Prácticas Profesionales</h3>
+          <h4>DXC Technology, Avilés</h4>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">09/2021 - 06/2023</div>
+        <div class="timeline-content">
+          <h3>Técnico en DAM</h3>
+          <h4>IES Doctor Fleming, Oviedo</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <section class="skills-section">
       <div class="container">
