@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
 </head>
 <body class="home-page">
   <header class="main-header">
@@ -38,32 +37,25 @@
 
   <main>
     <section class="hero">
-  <div class="hero-content" style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 55vh;
-    text-align: center;
-    margin: 2.5rem auto 2rem auto;
-    max-width: 600px;
-    padding: 2.5rem 2rem;
-    position: relative;
-  ">
-    <h1 class="hero-title">Carlos Velasco García</h1>
-    <span id="typed-greeting" style="display:block;font-size:1.3rem;color: greenyellow;margin-bottom:1rem;"></span>
-    <p class="hero-subtitle" style="align-self: flex-start; text-align: left;">
-      Dev Web &amp; Data Migration
-    </p>
-    <div class="cta-buttons">
-      <a href="profesional.html" class="btn btn-primary">Mi Perfil Profesional</a>
-      <a href="personal.html" class="btn btn-fancy">Un poco más sobre mí</a>
-    </div>
-  </div>
-  <div class="hero-image" style="display: flex; align-items: center; justify-content: center;">
-    <img src="assets/images/gif.gif" alt="Carlos Velasco García" loading="lazy" />
-  </div>
-</section>
+      <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 55vh; text-align: center; margin: 2.5rem auto 2rem auto; max-width: 600px; padding: 2.5rem 2rem; position: relative;">
+        <h1 class="hero-title">Carlos Velasco García</h1>
+        <span id="typed-greeting" style="display:block;font-size:1.3rem;color: greenyellow;margin-bottom:1rem;"></span>
+        <p class="hero-subtitle" style="align-self: flex-start; text-align: left;">Dev Web &amp; Data Migration</p>
+        <div class="cta-buttons">
+          <a href="profesional.html" class="btn btn-primary">Mi Perfil Profesional</a>
+          <a href="personal.html" class="btn btn-fancy">Un poco más sobre mí</a>
+        </div>
+      </div>
+      <div class="hero-image" style="display: flex; align-items: center; justify-content: center;">
+        <img src="assets/images/gif.gif" alt="Carlos Velasco García" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: CONTADOR -->
+    <section style="background: #111; color: white; text-align: center; padding: 2rem 1rem;">
+      <h2>¡Bienvenido a mi página!</h2>
+      <p>Eres el visitante número <strong id="visitor-count">...</strong> 🚀</p>
+    </section>
 
     <!-- MENÚ RÁPIDO -->
     <section class="quick-menu">
@@ -73,21 +65,24 @@
         <a href="contacto.html" class="quick-link"><i class="fas fa-paper-plane"></i> Contacto</a>
       </div>
     </section>
-<!-- Sobre mí -->
-<section class="about-me" style="background: linear-gradient(120deg, var(--secondary-color) 0%, var(--primary-color) 100%); padding: 3rem 0;">
-  <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-    <img src="assets/images/gif.gif" alt="Avatar Carlos Velasco" style="width: 110px; border-radius: 50%; box-shadow: 0 2px 12px rgba(44,62,80,0.12); background: var(--white);" />
-    <h2 style="color: var(--light-text); margin-bottom: 0.5rem;">Sobre mí</h2>
-    <p style="color: var(--light-text); font-size: 1.15rem; max-width: 600px; text-align: center;">
-      Soy un apasionado de la tecnología y el aprendizaje continuo.<br>
-      Me encanta transformar ideas en soluciones digitales y afrontar nuevos retos.<br>
-      <span style="color: var(--accent-color); font-weight: 600;">¿Te animas a descubrir más?</span>
-    </p>
-    <a href="personal.html" class="btn btn-fancy" style="margin-top: 1rem;">
-      <i class="fas fa-user"></i> Ver perfil personal
-    </a>
-  </div>
-</section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about-me" style="background: linear-gradient(120deg, var(--secondary-color) 0%, var(--primary-color) 100%); padding: 3rem 0;">
+      <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+        <img src="assets/images/gif.gif" alt="Avatar Carlos Velasco" style="width: 110px; border-radius: 50%; box-shadow: 0 2px 12px rgba(44,62,80,0.12); background: var(--white);" />
+        <h2 style="color: var(--light-text); margin-bottom: 0.5rem;">Sobre mí</h2>
+        <p style="color: var(--light-text); font-size: 1.15rem; max-width: 600px; text-align: center;">
+          Soy un apasionado de la tecnología y el aprendizaje continuo.<br>
+          Me encanta transformar ideas en soluciones digitales y afrontar nuevos retos.<br>
+          <span style="color: var(--accent-color); font-weight: 600;">¿Te animas a descubrir más?</span>
+        </p>
+        <a href="personal.html" class="btn btn-fancy" style="margin-top: 1rem;">
+          <i class="fas fa-user"></i> Ver perfil personal
+        </a>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
     <section class="highlights">
       <div class="container">
         <h2 class="section-title">Mis Especialidades</h2>
@@ -113,21 +108,20 @@
   </main>
 
   <footer class="main-footer">
-  <div class="footer-container">
-    <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/cvuser" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="footer-container">
+      <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/cvuser" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 
   <script src="js/main.js" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    // Efecto Typed.js para saludo animado
+    // Typed.js efecto
     if (document.getElementById('typed-greeting')) {
       new Typed('#typed-greeting', {
         strings: [
@@ -146,24 +140,51 @@
       });
     }
 
-    // Saludo basado en la hora
-const greeting = document.getElementById('typed-greeting');
-if (greeting) {
-  const hour = new Date().getHours();
-  let saludo = "¡Hola!";
-  if(hour < 12) saludo = "¡Buenos días!";
-  else if(hour < 20) saludo = "¡Buenas tardes!";
-  else saludo = "¡Buenas noches!";
-  greeting.insertAdjacentHTML('beforebegin', `<span style="color:#FABADA;font-size:1.1rem;">${saludo}</span>`);
-}
+    // Saludo horario
+    const greeting = document.getElementById('typed-greeting');
+    if (greeting) {
+      const hour = new Date().getHours();
+      let saludo = "¡Hola!";
+      if (hour < 12) saludo = "¡Buenos días!";
+      else if (hour < 20) saludo = "¡Buenas tardes!";
+      else saludo = "¡Buenas noches!";
+      greeting.insertAdjacentHTML('beforebegin', `<span style="color:#FABADA;font-size:1.1rem;">${saludo}</span>`);
+    }
 
-// Parallax effect for hero image
-const heroImg = document.querySelector('.hero-image img');
-window.addEventListener('scroll', () => {
-  if(heroImg){
-    heroImg.style.transform = `translateY(${window.scrollY * 0.08}px)`;
-  }
-});
+    // Efecto Parallax
+    const heroImg = document.querySelector('.hero-image img');
+    window.addEventListener('scroll', () => {
+      if (heroImg) {
+        heroImg.style.transform = `translateY(${window.scrollY * 0.08}px)`;
+      }
+    });
+
+    // Contador de visitas
+    const visitorElement = document.getElementById("visitor-count");
+    const VISITOR_KEY = "cvg-visitor-count";
+    let count = localStorage.getItem(VISITOR_KEY);
+    if (!count) count = 2000;
+    else count = parseInt(count) + 1;
+    localStorage.setItem(VISITOR_KEY, count);
+    visitorElement.textContent = count;
+
+    // Datos curiosos
+    const facts = [
+      "El primer sitio web fue creado en 1991 por Tim Berners-Lee.",
+      "JavaScript fue creado en solo 10 días.",
+      "Los humanos comparten un 60% de su ADN con los plátanos 🍌.",
+      "GitHub fue lanzado en 2008 y ahora tiene más de 100 millones de repositorios.",
+      "Cada minuto se suben más de 500 horas de video a YouTube.",
+      "Los emojis son considerados parte del lenguaje digital moderno."
+    ];
+    const factEl = document.getElementById("curious-fact");
+    let current = 0;
+    function rotateFact() {
+      factEl.textContent = facts[current];
+      current = (current + 1) % facts.length;
+    }
+    rotateFact();
+    setInterval(rotateFact, 5000);
   </script>
 </body>
 </html>
