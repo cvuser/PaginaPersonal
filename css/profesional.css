@@ -542,7 +542,6 @@ main {
     transform: translateX(0); /* Vuelve a su posición original (en la línea central) */
 }
 
-
 /* El punto en la línea de tiempo */
 .timeline-dot {
     position: absolute;
@@ -559,7 +558,7 @@ main {
 
 .timeline-date {
     font-weight: 600;
-    color: var(--text-accent);
+    color: var(--primary-color); /* Usar primary-color para acentuar */
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
 }
@@ -601,6 +600,9 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* --- Centrado de última caja --- */
+    justify-content: center; /* Centra los ítems de la cuadrícula horizontalmente */
+    grid-auto-rows: minmax(auto, max-content); /* Ajusta las filas automáticamente */
 }
 
 .skill-category {
@@ -676,6 +678,9 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* --- Centrado de última caja --- */
+    justify-content: center; /* Centra los ítems de la cuadrícula horizontalmente */
+    grid-auto-rows: minmax(auto, max-content); /* Ajusta las filas automáticamente */
 }
 
 .language-item {
@@ -751,6 +756,9 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* --- Centrado de última caja --- */
+    justify-content: center; /* Centra los ítems de la cuadrícula horizontalmente */
+    grid-auto-rows: minmax(auto, max-content); /* Ajusta las filas automáticamente */
 }
 
 .info-card {
@@ -855,6 +863,10 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.pdf-download-area .btn i {
+    font-size: 1.2rem;
 }
 
 .pdf-error {
@@ -977,13 +989,6 @@ main {
         margin-right: 0; /* Elimina el margen derecho si estaba establecido */
         padding-left: 1rem; /* Ajusta el padding si es necesario */
         text-align: left !important; /* Fuerza la alineación a la izquierda en móvil */
-        transform: translateX(0); /* Asegura que no haya transformaciones iniciales */
-    }
-
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        margin-left: 40px; /* Todas las cajas se alinean a la izquierda de la línea */
-        margin-right: 0;
         transform: translateX(0) translateY(20px); /* Transformación inicial para móviles (solo fade-in vertical) */
     }
 
@@ -998,6 +1003,7 @@ main {
 
     .skills-grid, .languages-grid, .info-grid {
         grid-template-columns: 1fr; /* Una columna en móvil */
+        justify-content: center; /* Asegura que se sigan centrando si hay una sola columna */
     }
 
     .skill-name {

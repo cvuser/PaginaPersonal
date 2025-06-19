@@ -1,405 +1,476 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Perfil profesional de Carlos Velasco García - Desarrollador Junior con Python y Java">
-  <title>Carlos Velasco García | Perfil Profesional</title>
-  <link rel="icon" href="assets/images/Carlos.jpeg" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/components/header.css">
-  <link rel="stylesheet" href="css/components/footer.css">
-  <link rel="stylesheet" href="css/components/cards.css">
-  <link rel="stylesheet" href="css/components/buttons.css">
-  <link rel="stylesheet" href="css/components/hero.css">
-  <link rel="stylesheet" href="css/components/forms.css">
-  <link rel="stylesheet" href="css/components/quickmenu.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <style>
-    /* Estilos específicos para el visor de PDF */
-    .pdf-viewer-container {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      overflow: hidden;
-      margin: 2rem 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil profesional de Carlos Velasco García - Desarrollador Junior con Python y Java, proyectos, experiencia y habilidades.">
+    <title>Carlos Velasco García | Perfil Profesional</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💼</text></svg>" />
     
-    .pdf-controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1rem 0;
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     
-    .pdf-controls button {
-      padding: 0.5rem 1rem;
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf_viewer.min.css">
     
-    .pdf-controls button:hover {
-      background: var(--secondary-color);
-    }
-    
-    /* Ajustes para las habilidades */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-  </style>
-  
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.timeline-item').forEach(item => {
-    observer.observe(item);
-  });
-</script>
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/profesional.css">
 </head>
 <body class="professional-page">
-  <header class="main-header">
-    <div class="header-container">
-      <a href="index.html" class="logo">CVG</a>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-          <li><a href="profesional.html" class="active"><i class="fas fa-briefcase"></i> Profesional</a></li>
-          <li><a href="personal.html"><i class="fas fa-user"></i> Personal</a></li>
-          <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <div class="animated-bg"></div> 
 
-  <main>
-    <section class="professional-hero">
-      <div class="container">
-        <h1>Carlos Velasco García</h1>
-        <p>Programador Junior con Python y Java | Desarrollo de Aplicaciones Web y Multiplataforma</p>
-      </div>
-    </section>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">CVG</a>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="profesional.html" class="active"><i class="fas fa-briefcase"></i> Profesional</a></li>
+                    <li><a href="personal.html"><i class="fas fa-user"></i> Personal</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section class="about-section">
-      <div class="container">
-        <h2 class="section-title">Acerca de Mí</h2>
-        <div class="about-content">
-          <p style="margin-bottom: 50px; text-align: center;">Soy un estudiante apasionado por la programación, siempre buscando aprender y mejorar. Valoro los consejos de profesionales experimentados y disfruto del trabajo en equipo. Estoy comprometido con mi crecimiento personal y profesional.</p>
-          
-         <!-- En la sección "about-section" de profesional.html, reemplaza el div quick-info por: -->
-          <div class="quick-info" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 30px;">
-            <div class="info-item" style="display: flex; align-items: center; gap: 0.5rem;">
-                <a href="tel:+34654658492" class="call-button" aria-label="Llamar a Carlos Velasco">
-                <i class="fas fa-phone-volume"></i> ¡Llamame! <span>654 658 492</span>
-              </a>
+    <main>
+        <section class="professional-hero">
+            <div class="container">
+                <h1>Perfil Profesional</h1>
+                <p>Desarrollador Junior Full Stack con enfoque en Python y Java, y experiencia en Migración de Datos</p>
             </div>
-            <div class="info-item" style="display: flex; align-items: center; gap: 0.5rem;">
-              <i class="fas fa-envelope"></i>
-              <span>c2003velasco@gmail.com</span>
+        </section>
+
+        <section class="about-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Acerca de Mí</h2>
+                <div class="about-content">
+                    <p>Soy Carlos Velasco García, un **desarrollador junior apasionado** por la creación de soluciones digitales y la **migración de datos**. Mi curiosidad me impulsa a un aprendizaje constante y disfruto aplicando mis conocimientos en proyectos desafiantes. Valoro enormemente el **trabajo en equipo** y la posibilidad de colaborar con profesionales experimentados para aprender y crecer juntos. Estoy comprometido con la excelencia y la mejora continua en cada paso de mi carrera.</p>
+                    
+                    <div class="quick-info">
+                        <div class="info-item">
+                            <a href="tel:+34654658492" class="call-button" aria-label="Llamar a Carlos Velasco">
+                                <i class="fas fa-phone-volume"></i> ¡Llamame! <span>654 658 492</span>
+                            </a>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>c2003velasco@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Oviedo, Asturias, España</span>
+                        </div>
+                        <div class="social-contact">
+                            <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/cvuser" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="info-item" style="display: flex; align-items: center; gap: 0.5rem;">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Oviedo, Asturias</span>
+        </section>
+
+        <section class="timeline-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Educación y Experiencia</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">02/2025 - Actualidad</div>
+                        <div class="timeline-content">
+                            <h3>Metadata Processing Technician</h3>
+                            <h4>Applus+, Parque Tecnológico Llanera</h4>
+                            <ul>
+                                <li>Preparación de metadatos para migración de BBDD.</li>
+                                <li>Filtración de documentos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">09/2024 - Actualidad</div>
+                        <div class="timeline-content">
+                            <h3>Técnico en DAW (Desarrollo de Aplicaciones Web)</h3>
+                            <h4>CIFP La Laboral, Gijón</h4>
+                            <p>Formación en las últimas tecnologías y frameworks para el desarrollo web front-end y back-end.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">09/2024 - 01/2025</div>
+                        <div class="timeline-content">
+                            <h3>Programador Python para IA</h3>
+                            <h4>Escuela de Organización Industrial</h4>
+                            <p>Curso especializado en programación Python aplicada a inteligencia artificial y machine learning.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">                        
+                        <div class="timeline-date">03/2023 - 06/2023</div>
+                        <div class="timeline-content">
+                            <h3>Prácticas Profesionales</h3>
+                            <h4>DXC Technology, Avilés</h4>
+                            <p>Experiencia práctica en entornos de desarrollo real, trabajando en [menciona brevemente alguna tarea o tecnología específica, ej: desarrollo Java para aplicaciones empresariales].</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">09/2021 - 06/2023</div>
+                        <div class="timeline-content">
+                            <h3>Técnico en DAM (Desarrollo de Aplicaciones Multiplataforma)</h3>
+                            <h4>IES Doctor Fleming, Oviedo</h4>
+                            <p>Adquisición de bases sólidas en programación, bases de datos y desarrollo de aplicaciones para diversas plataformas.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="quick-info" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 30px;">
-          <div class="social-contact">
-  <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com/cvuser" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://www.instagram.com/carlos_velasco?igsh=MjE5czNhZ2h4d3Fl" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
+        </section>
 
-        </div>
-      </div>
-    </section>
+        <section class="skills-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Lenguajes de Programación</h3>
+                        <ul class="skills-list">
+                            <li><span class="skill-name">Python</span><span class="skill-bar" data-level="85"></span></li>
+                            <li><span class="skill-name">Java</span><span class="skill-bar" data-level="80"></span></li>
+                            <li><span class="skill-name">JavaScript</span><span class="skill-bar" data-level="75"></span></li>
+                            <li><span class="skill-name">PHP</span><span class="skill-bar" data-level="60"></span></li>
+                            <li><span class="skill-name">SQL</span><span class="skill-bar" data-level="70"></span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Librerías</h3>
+                        <ul class="skills-list">
+                            <li><span class="skill-name">React.js</span><span class="skill-bar" data-level="65"></span></li>
+                            <li><span class="skill-name">Spring Boot</span><span class="skill-bar" data-level="70"></span></li>
+                            <li><span class="skill-name">Laravel</span><span class="skill-bar" data-level="55"></span></li>
+                            <li><span class="skill-name">Flask/Django (Básico)</span><span class="skill-bar" data-level="50"></span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Bases de Datos</h3>
+                        <ul class="skills-list">
+                            <li><span class="skill-name">MySQL</span><span class="skill-bar" data-level="75"></span></li>
+                            <li><span class="skill-name">MongoDB</span><span class="skill-bar" data-level="60"></span></li>
+                            <li><span class="skill-name">Oracle SQL</span><span class="skill-bar" data-level="50"></span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Herramientas & Otros</h3>
+                        <ul class="skills-list">
+                            <li><span class="skill-name">Git / GitHub</span><span class="skill-bar" data-level="80"></span></li>
+                            <li><span class="skill-name">Docker (Básico)</span><span class="skill-bar" data-level="40"></span></li>
+                            <li><span class="skill-name">Android Studio</span><span class="skill-bar" data-level="70"></span></li>
+                            <li><span class="skill-name">VS Code</span><span class="skill-bar" data-level="85"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="timeline-section">
-  <div class="container">
-    <h2 class="section-title">Educación y Experiencia</h2>
-    <div class="timeline">
+        <section class="languages-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Idiomas</h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <h3>Inglés</h3>
+                        <p>Nivel **B2** certificado por Cambridge (FCE)</p>
+                        <p>Actualmente cursando **C1.2** en la Escuela Oficial de Idiomas (EOI)</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">02/2025 - Actualidad</div>
-        <div class="timeline-content">
-          <h3 >Metadata Processing Technician</h3>
-          <h4>Applus+, Parque Tecnológico Llanera</h4>
-          <ul>
-            <p>Preparación de metadatos para migración de BBDD.</p>
-            <p>Filtración de documentos.</p>
-          </ul>
-        </div>
-      </div>
+        <section class="soft-skills-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Soft Skills</h2>
+                <ul>
+                    <li>🤝 Trabajo en equipo</li>
+                    <li>💡 Creatividad</li>
+                    <li>🗣️ Comunicación efectiva</li>
+                    <li>⏳ Gestión del tiempo</li>
+                    <li>🎯 Proactividad</li>
+                    <li>📈 Adaptabilidad</li>
+                </ul>
+            </div>
+        </section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">09/2024 - Actualidad</div>
-        <div class="timeline-content">
-          <h3>Técnico en DAW</h3>
-          <h4>CIFP La Laboral, Gijón</h4>
-        </div>
-      </div>
+        <section class="additional-info fade-in">
+            <div class="container">
+                <h2 class="section-title">Datos de Interés</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-car"></i>
+                        <h3>Carné de conducir y vehículo propio</h3>
+                        <p>Total autonomía para desplazamientos.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Movilidad geográfica total</h3>
+                        <p>Dispuesto a reubicarme para nuevas oportunidades.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h3>Fecha de nacimiento: 06/02/2003</h3>
+                        <p>Joven y con gran capacidad de aprendizaje.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Inscrito en el programa de garantía juvenil</h3>
+                        <p>Acceso a beneficios y oportunidades de empleo para jóvenes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">09/2024 - 01/2025</div>
-        <div class="timeline-content">
-          <h3>Programador Python para IA</h3>
-          <h4>Escuela de Organización Industrial</h4>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">03/2023 - 06/2023</div>
-        <div class="timeline-content">
-          <h3>Prácticas Profesionales</h3>
-          <h4>DXC Technology, Avilés</h4>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">09/2021 - 06/2023</div>
-        <div class="timeline-content">
-          <h3>Técnico en DAM</h3>
-          <h4>IES Doctor Fleming, Oviedo</h4>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <section class="skills-section">
-      <div class="container">
-        <h2 class="section-title">Habilidades Técnicas</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Lenguajes de Programación</h3>
-            <ul class="skills-list">
-              <li><span class="skill-name">Python</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">Java</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">JavaScript</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">PHP</span><span class="skill-bar" data-level="80"></span></li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul class="skills-list">
-              <li><span class="skill-name">HTML5/CSS3</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">Bootstrap</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">React.js</span><span class="skill-bar" data-level="80"></span></li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Otras Tecnologías</h3>
-            <ul class="skills-list">
-              <li><span class="skill-name">Android Studio</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">Git/GitHub</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">Laravel</span><span class="skill-bar" data-level="80"></span></li>
-              <li><span class="skill-name">Springboot</span><span class="skill-bar" data-level="80"></span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="languages-section">
-      <div class="container">
-        <h2 class="section-title">Idiomas</h2>
-        <div class="languages-grid">
-          <div class="language-item">
-            <h3>Inglés</h3>
-            <p>Nivel B2 certificado por Cambridge (FCE)</p>
-            <p>Actualmente cursando C1.2 en la Escuela Oficial de Idiomas (EOI)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="soft-skills-section">
-  <div class="container">
-    <h2 class="section-title">Soft Skills</h2>
-    <ul style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;list-style:none;padding:0;">
-      <li>🤝 Trabajo en equipo</li>
-      <li>💡 Creatividad</li>
-      <li>🗣️ Comunicación</li>
-      <li>⏳ Gestión del tiempo</li>
-    </ul>
-  </div>
-</section>
-
-  <section class="additional-info">
-      <div class="container">
-        <h2 class="section-title">Datos de Interés</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <i class="fas fa-car"></i>
-            <h3>Carné de conducir y vehículo propio</h3>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-map-marked-alt"></i>
-            <h3>Movilidad geográfica</h3>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-birthday-cake"></i>
-            <h3>Fecha de nacimiento: 06/02/2003</h3>
-          </div>
-          <div class="info-card">
-            <i class="fas fa-user-tie"></i>
-            <h3>Inscrito en el programa de garantía juvenil</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section class="pdf-section">
-      <div class="container">
-        <h2 class="section-title">Currículum PDF</h2>
-        <div class="pdf-viewer-wrapper">
-          <embed src="assets\pdfs\cv.pdf" type="application/pdf" width="100%" height="700px" />
-        </div>
-      </div>
-    </section>
-    
-
-  
-  </main>
-
-  <footer class="main-footer">
-    <div class="footer-container">
-      <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/cvuser" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- PDF.js Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-  <script src="js/main.js" type="module"></script>
-  
-  <script>
-    // Configuración del visor de PDF
-    document.addEventListener('DOMContentLoaded', () => {
-      // Establecer la URL del PDF
-      const pdfUrl = 'assets//pdfs//cv.pdf';
-      
-      // Configurar PDF.js
-      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
-      
-      let pdfDoc = null,
-          pageNum = 1,
-          pageRendering = false,
-          pageNumPending = null,
-          scale = 1.5,
-          canvas = document.getElementById('pdf-canvas'),
-          ctx = canvas.getContext('2d');
-      
-      // Función para renderizar la página
-      function renderPage(num) {
-        pageRendering = true;
+        <section class="pdf-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Currículum PDF</h2>
+                <div class="pdf-viewer-container">
+                    <canvas id="pdf-canvas"></canvas>
+                    <div class="pdf-controls">
+                        <button id="prev-page"><i class="fas fa-chevron-left"></i> Anterior</button>
+                        <span id="page-num">Página 1 de X</span>
+                        <button id="next-page">Siguiente <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="pdf-download-area" style="display: none;"> <a href="assets/pdfs/cv.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Descargar Currículum Completo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        pdfDoc.getPage(num).then(function(page) {
-          const viewport = page.getViewport({ scale: scale });
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
-          
-          const renderContext = {
-            canvasContext: ctx,
-            viewport: viewport
-          };
-          
-          const renderTask = page.render(renderContext);
-          
-          renderTask.promise.then(function() {
-            pageRendering = false;
-            if (pageNumPending !== null) {
-              renderPage(pageNumPending);
-              pageNumPending = null;
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/cvuser" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Common JavaScript Functionality (from index/personal) ---
+            // Current year for the footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Intersection Observer for fade-in elements (all sections you want to animate)
+            const observerOptions = {
+                threshold: 0.1, // Element is visible by 10%
+                rootMargin: '0px 0px -50px 0px' // Start animation 50px before it reaches bottom of viewport
+            };
+
+            const generalObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Specific animation for skill bars when their section becomes visible
+                        if (entry.target.classList.contains('skills-section')) {
+                            animateSkillBars(entry.target);
+                        }
+                        // Stop observing once visible if animation is one-time
+                        // observer.unobserve(entry.target); 
+                    } else {
+                        // Optional: remove 'visible' class if element scrolls out of view
+                        // If you want the animation to re-play on scroll up/down
+                        entry.target.classList.remove('visible');
+                        if (entry.target.classList.contains('skills-section')) {
+                            resetSkillBars(entry.target);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections and timeline items for fade-in effect
+            document.querySelectorAll(
+                '.about-section, .timeline-section, .skills-section, .languages-section, .soft-skills-section, .additional-info, .pdf-section, .timeline-item'
+            ).forEach(el => {
+                generalObserver.observe(el);
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                menuToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+            });
+
+            // Hide mobile menu when a nav link is clicked (optional)
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768) { // Only for mobile view
+                        mainNav.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+
+            // Header scroll effect (hide/show)
+            let lastScrollY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.main-header');
+                if (window.scrollY > lastScrollY && window.scrollY > 100) { // Scroll down and past 100px
+                    header.style.transform = 'translateY(-100%)';
+                } else { // Scroll up or at top
+                    header.style.transform = 'translateY(0)';
+                }
+                lastScrollY = window.scrollY;
+            });
+
+            // --- Professional Page Specific JavaScript ---
+
+            // Skill Bar Animation Logic
+            function animateSkillBars(section) {
+                section.querySelectorAll('.skill-bar').forEach(bar => {
+                    const level = bar.getAttribute('data-level');
+                    bar.style.setProperty('--skill-level', `${level}%`);
+                });
             }
-          });
+
+            function resetSkillBars(section) {
+                section.querySelectorAll('.skill-bar').forEach(bar => {
+                    bar.style.setProperty('--skill-level', `0%`); // Reset to 0 for re-animation
+                });
+            }
+
+            // PDF.js Viewer Integration
+            const pdfUrl = 'assets/pdfs/cv.pdf'; // Make sure this path is correct!
+            const pdfCanvas = document.getElementById('pdf-canvas');
+            const pdfCtx = pdfCanvas.getContext('2d');
+            const pageNumSpan = document.getElementById('page-num');
+            const prevPageBtn = document.getElementById('prev-page');
+            const nextPageBtn = document.getElementById('next-page');
+            const pdfViewerContainer = document.querySelector('.pdf-viewer-container');
+            const pdfDownloadArea = document.querySelector('.pdf-download-area');
+
+            let pdfDoc = null;
+            let pageNum = 1;
+            let pageRendering = false;
+            let pageNumPending = null;
+            const scale = 1.5; // Adjust the scale as needed for clarity vs. fit
+
+            // Set the workerSrc for PDF.js
+            if (typeof pdfjsLib !== 'undefined') { // Check if pdfjsLib is loaded
+                pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+            } else {
+                console.error("PDF.js library not loaded.");
+                // Fallback UI if PDF.js isn't available
+                pdfViewerContainer.innerHTML = `
+                    <div class="pdf-error">
+                        <p>⚠️ No se pudo cargar la vista previa del CV. Por favor, descarga el documento directamente:</p>
+                        <a href="${pdfUrl}" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Descargar Currículum Completo
+                        </a>
+                    </div>
+                `;
+                return; // Exit if PDF.js is not loaded
+            }
+
+            function renderPage(num) {
+                pageRendering = true;
+                if (pdfDoc === null) return; // Ensure pdfDoc is loaded
+
+                pdfDoc.getPage(num).then(function(page) {
+                    const viewport = page.getViewport({ scale: scale });
+                    
+                    // Adjust canvas size to fit viewport and maintain aspect ratio
+                    const containerWidth = pdfViewerContainer.clientWidth - 2 * parseFloat(getComputedStyle(pdfViewerContainer).paddingLeft);
+                    const renderScale = containerWidth / viewport.width;
+                    const scaledViewport = page.getViewport({ scale: renderScale });
+
+                    pdfCanvas.height = scaledViewport.height;
+                    pdfCanvas.width = scaledViewport.width;
+
+                    const renderContext = {
+                        canvasContext: pdfCtx,
+                        viewport: scaledViewport
+                    };
+                    
+                    const renderTask = page.render(renderContext);
+                    
+                    renderTask.promise.then(function() {
+                        pageRendering = false;
+                        if (pageNumPending !== null) {
+                            renderPage(pageNumPending);
+                            pageNumPending = null;
+                        }
+                    });
+                }).catch(function(error) {
+                    console.error('Error rendering PDF page:', error);
+                    // Handle specific page rendering errors
+                });
+
+                pageNumSpan.textContent = `Página ${num} de ${pdfDoc.numPages}`;
+            }
+
+            function queueRenderPage(num) {
+                if (pageRendering) {
+                    pageNumPending = num;
+                } else {
+                    renderPage(num);
+                }
+            }
+
+            function onPrevPage() {
+                if (pageNum <= 1) return;
+                pageNum--;
+                queueRenderPage(pageNum);
+            }
+
+            function onNextPage() {
+                if (pageNum >= pdfDoc.numPages) return;
+                pageNum++;
+                queueRenderPage(pageNum);
+            }
+
+            // Initial PDF load
+            pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc_) {
+                pdfDoc = pdfDoc_;
+                prevPageBtn.addEventListener('click', onPrevPage);
+                nextPageBtn.addEventListener('click', onNextPage);
+                renderPage(pageNum);
+                pdfDownloadArea.style.display = 'block'; // Show download button once PDF is loaded
+            }).catch(function(error) {
+                console.error('Error al cargar el PDF:', error);
+                pdfViewerContainer.innerHTML = `
+                    <div class="pdf-error">
+                        <p>⚠️ No se pudo cargar la vista previa del CV. Por favor, descarga el documento directamente:</p>
+                        <a href="${pdfUrl}" download class="btn btn-primary" style="margin-top: 1rem;">
+                            <i class="fas fa-download"></i> Descargar Currículum Completo
+                        </a>
+                    </div>
+                `;
+            });
+            
+            // Adjust canvas size on window resize
+            window.addEventListener('resize', () => {
+                if (pdfDoc) {
+                    renderPage(pageNum); // Re-render to adjust size
+                }
+            });
         });
-        
-        document.getElementById('page-num').textContent = `Página ${num} de ${pdfDoc.numPages}`;
-      }
-      
-      // Función para ir a la página anterior
-      function onPrevPage() {
-        if (pageNum <= 1) return;
-        pageNum--;
-        queueRenderPage(pageNum);
-      }
-      
-      // Función para ir a la página siguiente
-      function onNextPage() {
-        if (pageNum >= pdfDoc.numPages) return;
-        pageNum++;
-        queueRenderPage(pageNum);
-      }
-      
-      // Función para encolar la renderización de la página
-      function queueRenderPage(num) {
-        if (pageRendering) {
-          pageNumPending = num;
-        } else {
-          renderPage(num);
-        }
-      }
-      
-      // Cargar el PDF
-      pdfjsLib.getDocument(pdfUrl).promise.then(function(pdfDoc_) {
-        pdfDoc = pdfDoc_;
-        document.getElementById('page-num').textContent = `Página 1 de ${pdfDoc.numPages}`;
-        renderPage(pageNum);
-      }).catch(function(error) {
-        console.error('Error al cargar el PDF:', error);
-        document.querySelector('.pdf-viewer-container').innerHTML = `
-          <div class="pdf-error">
-            <p>No se pudo cargar el PDF. Por favor, descárgalo directamente:</p>
-            <a href="${pdfUrl}" download class="btn btn-primary">
-              <i class="fas fa-download"></i> Descargar Currículum
-            </a>
-          </div>
-        `;
-      });
-      
-      // Event listeners para los botones
-      document.getElementById('prev-page').addEventListener('click', onPrevPage);
-      document.getElementById('next-page').addEventListener('click', onNextPage);
-      
-      // Actualizar año en el footer
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-    });
-  </script>
+    </script>
 </body>
 </html>

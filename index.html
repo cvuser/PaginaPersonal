@@ -1,35 +1,30 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sitio personal de Carlos Velasco García - Desarrollador Web Full Stack" />
   <title>Carlos Velasco García | Inicio</title>
-  <link rel="icon" href="assets/images/Carlos.jpeg" type="image/x-icon" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👨‍💻</text></svg>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/components/quickmenu.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/components/header.css" />
-  <link rel="stylesheet" href="css/components/footer.css" />
-  <link rel="stylesheet" href="css/components/cards.css" />
-  <link rel="stylesheet" href="css/components/buttons.css" />
-  <link rel="stylesheet" href="css/components/hero.css" />
-  <link rel="stylesheet" href="css/components/forms.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="home-page">
+<body>
+  <div class="animated-bg"></div>
+
   <header class="main-header">
     <div class="header-container">
-      <a href="index.html" class="logo">CVG</a>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a href="#" class="logo">CVG</a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
-          <li><a href="profesional.html"><i class="fas fa-briefcase"></i> Profesional</a></li>
-          <li><a href="personal.html"><i class="fas fa-user"></i> Personal</a></li>
-          <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+          <li><a href="/index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="/profesional.html"><i class="fas fa-briefcase"></i> Profesional</a></li>
+          <li><a href="/personal.html"><i class="fas fa-user"></i> Personal</a></li>
+          <li><a href="/contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -37,71 +32,83 @@
 
   <main>
     <section class="hero">
-      <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 55vh; text-align: center; margin: 2.5rem auto 2rem auto; max-width: 600px; padding: 2.5rem 2rem; position: relative;">
+      <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+      </div>
+      
+      <div class="hero-content">
         <h1 class="hero-title">Carlos Velasco García</h1>
-        <span id="typed-greeting" style="display:block;font-size:1.3rem;color: greenyellow;margin-bottom:1rem;"></span>
-        <p class="hero-subtitle" style="align-self: flex-start; text-align: left;">Dev Web &amp; Data Migration</p>
+        <p class="hero-subtitle">Dev Web &amp; Data Migration</p>
+        <div class="typed-text" id="typed-text"></div>
         <div class="cta-buttons">
-          <a href="profesional.html" class="btn btn-primary">Mi Perfil Profesional</a>
-          <a href="personal.html" class="btn btn-fancy">Un poco más sobre mí</a>
+          <a href="#" class="btn btn-primary">Mi Perfil Profesional</a>
+          <a href="#" class="btn btn-secondary">Un poco más sobre mí</a>
         </div>
       </div>
-      <div class="hero-image" style="display: flex; align-items: center; justify-content: center;">
-        <img src="assets/images/gif.gif" alt="Carlos Velasco García" loading="lazy" />
-      </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: CONTADOR -->
-    <section style="background: #111; color: white; text-align: center; padding: 2rem 1rem;">
+    <section class="visitor-section fade-in">
       <h2>¡Bienvenido a mi página!</h2>
-      <p>Eres el visitante número <strong id="visitor-count">...</strong> 🚀</p>
+      <p>Eres el visitante número <span class="visitor-count" id="visitor-count">...</span> 🚀</p>
     </section>
 
-    <!-- MENÚ RÁPIDO -->
-    <section class="quick-menu">
+    <section class="quick-menu fade-in">
       <div class="quick-container">
-        <a href="profesional.html" class="quick-link"><i class="fas fa-laptop-code"></i> Profesional</a>
-        <a href="personal.html" class="quick-link"><i class="fas fa-star"></i> Personal</a>
-        <a href="contacto.html" class="quick-link"><i class="fas fa-paper-plane"></i> Contacto</a>
+        <a href="#" class="quick-link">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Profesional</h3>
+          <p>Descubre mi experiencia y proyectos</p>
+        </a>
+        <a href="#" class="quick-link">
+          <i class="fas fa-star"></i>
+          <h3>Personal</h3>
+          <p>Conoce más sobre mis intereses</p>
+        </a>
+        <a href="#" class="quick-link">
+          <i class="fas fa-paper-plane"></i>
+          <h3>Contacto</h3>
+          <p>¡Hablemos de tu próximo proyecto!</p>
+        </a>
       </div>
     </section>
 
-    <!-- SOBRE MÍ -->
-    <section class="about-me" style="background: linear-gradient(120deg, var(--secondary-color) 0%, var(--primary-color) 100%); padding: 3rem 0;">
-      <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-        <img src="assets/images/gif.gif" alt="Avatar Carlos Velasco" style="width: 110px; border-radius: 50%; box-shadow: 0 2px 12px rgba(44,62,80,0.12); background: var(--white);" />
-        <h2 style="color: var(--light-text); margin-bottom: 0.5rem;">Sobre mí</h2>
-        <p style="color: var(--light-text); font-size: 1.15rem; max-width: 600px; text-align: center;">
-          Soy un apasionado de la tecnología y el aprendizaje continuo.<br>
-          Me encanta transformar ideas en soluciones digitales y afrontar nuevos retos.<br>
-          <span style="color: var(--accent-color); font-weight: 600;">¿Te animas a descubrir más?</span>
+    <section class="about-section fade-in">
+      <div class="about-container">
+        <div class="avatar">👨‍💻</div>
+        <h2 class="about-title">Sobre mí</h2>
+        <p class="about-text">
+          Soy un apasionado de la tecnología y el aprendizaje continuo.
+          Me encanta transformar ideas en soluciones digitales y afrontar nuevos retos.
+          <span style="color: var(--text-accent); font-weight: 600;">¿Te animas a descubrir más?</span>
         </p>
-        <a href="personal.html" class="btn btn-fancy" style="margin-top: 1rem;">
+        <a href="#" class="btn btn-primary">
           <i class="fas fa-user"></i> Ver perfil personal
         </a>
       </div>
     </section>
 
-    <!-- ESPECIALIDADES -->
-    <section class="highlights">
-      <div class="container">
+    <section class="skills-section fade-in">
+      <div class="skills-container">
         <h2 class="section-title">Mis Especialidades</h2>
-        <div class="cards-container">
-          <article class="card">
-            <i class="fas fa-code card-icon"></i>
-            <h3>Desarrollo Web</h3>
-            <p>Experiencia en React, Springboot.js y bases de datos relacionales y no relacionales.</p>
-          </article>
-          <article class="card">
-            <i class="fas fa-robot card-icon"></i>
-            <h3>Automatización</h3>
-            <p>Scripts en Python para automatización de tareas y web scraping.</p>
-          </article>
-          <article class="card">
-            <i class="fas fa-futbol card-icon"></i>
-            <h3>Deporte</h3>
-            <p>Capitán de equipo de fútbol 7 con varios torneos ganados.</p>
-          </article>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fas fa-code skill-icon"></i>
+            <h3 class="skill-title">Desarrollo Web</h3>
+            <p class="skill-description">Experiencia en React, Spring Boot y bases de datos relacionales y no relacionales.</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-robot skill-icon"></i>
+            <h3 class="skill-title">Automatización</h3>
+            <p class="skill-description">Scripts en Python para automatización de tareas y web scraping.</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-futbol skill-icon"></i>
+            <h3 class="skill-title">Deporte</h3>
+            <p class="skill-description">Capitán de equipo de fútbol 7 con varios torneos ganados.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -111,80 +118,149 @@
     <div class="footer-container">
       <p>&copy; <span id="current-year"></span> Carlos Velasco García. Todos los derechos reservados.</p>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/cvuser" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/cvuser" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js" type="module"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    // Typed.js efecto
-    if (document.getElementById('typed-greeting')) {
-      new Typed('#typed-greeting', {
-        strings: [
-          "¡Hola! Welcome! 👋",
-          "Bienvenido/a a mi Página Personal",
-          "Soy Carlos Velasco García",
-          "Desarrollador Web Full Stack",
-          "¡Explora y conoce mi trabajo!"
-        ],
-        typeSpeed: 55,
-        backSpeed: 30,
-        backDelay: 1200,
-        startDelay: 400,
-        loop: true,
-        showCursor: false
-      });
-    }
-
-    // Saludo horario
-    const greeting = document.getElementById('typed-greeting');
-    if (greeting) {
-      const hour = new Date().getHours();
-      let saludo = "¡Hola!";
-      if (hour < 12) saludo = "¡Buenos días!";
-      else if (hour < 20) saludo = "¡Buenas tardes!";
-      else saludo = "¡Buenas noches!";
-      greeting.insertAdjacentHTML('beforebegin', `<span style="color:#FABADA;font-size:1.1rem;">${saludo}</span>`);
-    }
-
-    // Efecto Parallax
-    const heroImg = document.querySelector('.hero-image img');
-    window.addEventListener('scroll', () => {
-      if (heroImg) {
-        heroImg.style.transform = `translateY(${window.scrollY * 0.08}px)`;
+    // Typing animation
+    const typedElement = document.getElementById('typed-text');
+    const messages = [
+      "¡Hola! Welcome! 👋",
+      "Bienvenido/a a mi Página Personal",
+      "Soy Carlos Velasco García",
+      "Desarrollador Web Full Stack",
+      "¡Explora y conoce mi trabajo!"
+    ];
+    
+    let messageIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeMessage() {
+      const currentMessage = messages[messageIndex];
+      
+      if (isDeleting) {
+        typedElement.textContent = currentMessage.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedElement.textContent = currentMessage.substring(0, charIndex + 1);
+        charIndex++;
       }
-    });
+      
+      let typeSpeed = isDeleting ? 50 : 100;
+      
+      if (!isDeleting && charIndex === currentMessage.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        messageIndex = (messageIndex + 1) % messages.length;
+        typeSpeed = 500;
+      }
+      
+      setTimeout(typeMessage, typeSpeed);
+    }
+    
+    // Start typing animation
+    typeMessage();
 
-    // Contador de visitas
+    // Visitor counter
     const visitorElement = document.getElementById("visitor-count");
     const VISITOR_KEY = "cvg-visitor-count";
     let count = localStorage.getItem(VISITOR_KEY);
-    if (!count) count = 2000;
-    else count = parseInt(count) + 1;
-    localStorage.setItem(VISITOR_KEY, count);
-    visitorElement.textContent = count;
-
-    // Datos curiosos
-    const facts = [
-      "El primer sitio web fue creado en 1991 por Tim Berners-Lee.",
-      "JavaScript fue creado en solo 10 días.",
-      "Los humanos comparten un 60% de su ADN con los plátanos 🍌.",
-      "GitHub fue lanzado en 2008 y ahora tiene más de 100 millones de repositorios.",
-      "Cada minuto se suben más de 500 horas de video a YouTube.",
-      "Los emojis son considerados parte del lenguaje digital moderno."
-    ];
-    const factEl = document.getElementById("curious-fact");
-    let current = 0;
-    function rotateFact() {
-      factEl.textContent = facts[current];
-      current = (current + 1) % facts.length;
+    if (!count) {
+      count = Math.floor(Math.random() * 1000) + 2000;
+    } else {
+      count = parseInt(count) + 1;
     }
-    rotateFact();
-    setInterval(rotateFact, 5000);
+    localStorage.setItem(VISITOR_KEY, count);
+    
+    // Animate counter
+    let currentCount = 0;
+    const increment = count / 100;
+    const timer = setInterval(() => {
+      currentCount += increment;
+      if (currentCount >= count) {
+        currentCount = count;
+        clearInterval(timer);
+      }
+      visitorElement.textContent = Math.floor(currentCount);
+    }, 20);
+
+    // Current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    
+    menuToggle.addEventListener('click', () => {
+      mainNav.style.display = mainNav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Header scroll effect
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.main-header');
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollY = window.scrollY;
+    });
+
+    // Parallax effect for floating elements
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      const floatingElements = document.querySelectorAll('.floating-element');
+      floatingElements.forEach((element, index) => {
+        element.style.transform = `translateY(${rate * (index + 1) * 0.1}px)`;
+      });
+    });
   </script>
 </body>
 </html>
