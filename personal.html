@@ -11,6 +11,344 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Estilos específicos para el hero de personal.html - Ahora más oscuro */
+        .hero {
+            /* Fondo oscuro con un degradado sutil para mantener la coherencia */
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: var(--text-primary);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Fondo animado con colores complementarios a la paleta oscura */
+            background: radial-gradient(circle at top left, rgba(78, 205, 196, 0.1), transparent 50%),
+                        radial-gradient(circle at bottom right, rgba(255, 107, 107, 0.1), transparent 50%);
+            background-size: 200% 200%;
+            animation: moveBackground 20s ease infinite alternate;
+            z-index: 0;
+            opacity: 0.8; /* Más opaco para que se note en el fondo oscuro */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-primary);
+        }
+
+        .typed-text-personal { /* ID específico para el texto animado */
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--color-vibrant-yellow); /* Amarillo vibrante sobre fondo oscuro */
+            height: 1.8em;
+            margin-bottom: 2.5rem;
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(255, 209, 102, 0.6);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            white-space: nowrap;
+            box-shadow: var(--shadow-card);
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient); /* Usamos el degradado primario oscuro a naranja */
+            color: var(--text-primary);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-card);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Quick Menu (Mantiene los estilos consistentes con index.html) */
+        .quick-menu {
+            background-color: var(--bg-secondary);
+            padding: 6rem 2rem;
+        }
+
+        .quick-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .quick-link {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .quick-link:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .quick-link i {
+            font-size: 3.5rem;
+            color: var(--color-vibrant-blue); /* Azul vibrante para los íconos del quick menu */
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+        }
+
+        .quick-link h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .quick-link p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* About Section (Mantiene los estilos consistentes con index.html) */
+        .about-section {
+            background: var(--bg-primary);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .avatar {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            line-height: 1;
+            filter: drop-shadow(0 0 15px rgba(255, 209, 102, 0.6));
+        }
+
+        .about-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--color-vibrant-green); /* Verde vibrante para el título */
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .about-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-gradient); /* Degradado en la línea */
+            border-radius: 2px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section (Mantiene los estilos consistentes con index.html) */
+        .skills-section {
+            background: var(--bg-secondary);
+            padding: 6rem 2rem;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .skill-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .skill-icon {
+            font-size: 3.5rem;
+            color: var(--color-vibrant-blue); /* Azul vibrante para los íconos de habilidad */
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+        }
+
+        .skill-title {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            .typed-text-personal {
+                font-size: 1.2rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            .quick-container, .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-container {
+                padding: 2rem;
+            }
+            .about-title {
+                font-size: 2.5rem;
+            }
+            .skill-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            .typed-text-personal {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            .quick-menu, .about-section, .skills-section {
+                padding: 4rem 1rem;
+            }
+            .quick-link, .skill-card {
+                padding: 1.5rem 1rem;
+            }
+            .quick-link i, .skill-icon {
+                font-size: 3rem;
+            }
+            .quick-link h3, .skill-title {
+                font-size: 1.5rem;
+            }
+            .about-title {
+                font-size: 2rem;
+            }
+            .about-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="animated-bg"></div>
@@ -32,41 +370,41 @@
 
     <main>
         <section class="hero">
-            <div class="floating-elements">
-                <div class="floating-element"></div>
-                <div class="floating-element"></div>
-                <div class="floating-element"></div>
-                <div class="floating-element"></div>
-            </div>
-            
             <div class="hero-content">
                 <h1 class="hero-title">¿Quién soy fuera del trabajo?</h1> 
-                <p class="hero-subtitle">Descubre mis hobbies, pasiones e intereses personales</p> 
-                <div class="typed-text" id="typed-text-personal"></div> 
+                <p class="hero-subtitle">Descubre mis hobbies, pasiones e intereses personales.</p> 
+                <div class="typed-text-personal" id="typed-text-personal"></div> 
                 <div class="cta-buttons">
-                    <a href="profesional.html" class="btn btn-primary">Mi Perfil Profesional</a>
-                    <a href="contacto.html" class="btn btn-secondary">¡Hablemos!</a>
+                    <a href="profesional.html" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> Mi Perfil Profesional
+                    </a>
+                    <a href="contacto.html" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> ¡Hablemos!
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="quick-menu fade-in">
-            <div class="quick-container">
-                <a href="profesional.html" class="quick-link">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Profesional</h3>
-                    <p>Descubre mi experiencia y proyectos</p>
-                </a>
-                <a href="personal.html" class="quick-link">
-                    <i class="fas fa-star"></i>
-                    <h3>Personal</h3>
-                    <p>Conoce más sobre mis intereses</p>
-                </a>
-                <a href="contacto.html" class="quick-link">
-                    <i class="fas fa-paper-plane"></i>
-                    <h3>Contacto</h3>
-                    <p>¡Hablemos de tu próximo proyecto!</p>
-                </a>
+            <div class="container">
+                <h2 class="section-title">Navegación Rápida</h2>
+                <div class="quick-container">
+                    <a href="profesional.html" class="quick-link">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Profesional</h3>
+                        <p>Descubre mi experiencia y proyectos.</p>
+                    </a>
+                    <a href="personal.html" class="quick-link">
+                        <i class="fas fa-star"></i>
+                        <h3>Personal</h3>
+                        <p>Conoce más sobre mis intereses.</p>
+                    </a>
+                    <a href="contacto.html" class="quick-link">
+                        <i class="fas fa-paper-plane"></i>
+                        <h3>Contacto</h3>
+                        <p>¡Hablemos de tu próximo proyecto!</p>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -83,27 +421,45 @@
                     En mi tiempo libre, me gusta **descubrir nuevos restaurantes** y **viajar a lugares con historia**. También dedico tiempo a **proyectos personales de programación** que no están relacionados con el trabajo.
                     Creo firmemente en el **equilibrio entre el trabajo y la vida personal** para un desarrollo integral.
                 </p>
+                <a href="contacto.html" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Conectar conmigo
+                </a>
             </div>
         </section>
 
         <section class="skills-section fade-in">
-            <div class="skills-container">
+            <div class="container">
                 <h2 class="section-title">Lo que me apasiona</h2>
                 <div class="skills-grid">
                     <div class="skill-card">
                         <i class="fas fa-camera skill-icon"></i> 
                         <h3 class="skill-title">Fotografía</h3>
-                        <p class="skill-description">Capturar momentos y paisajes, especialmente durante mis viajes.</p>
+                        <p class="skill-description">Capturar momentos y paisajes, especialmente durante mis viajes y aventuras.</p>
                     </div>
                     <div class="skill-card">
                         <i class="fas fa-headphones-alt skill-icon"></i> 
                         <h3 class="skill-title">Música</h3>
-                        <p class="skill-description">Desde clásicos del rock hasta nuevas bandas, la música es mi banda sonora diaria.</p>
+                        <p class="skill-description">Desde clásicos del rock hasta nuevas bandas, la música es mi banda sonora diaria y una fuente de inspiración.</p>
                     </div>
                     <div class="skill-card">
                         <i class="fas fa-map-marked-alt skill-icon"></i> 
                         <h3 class="skill-title">Viajar</h3>
-                        <p class="skill-description">Conocer nuevas culturas, probar gastronomías locales y explorar rincones del mundo.</p>
+                        <p class="skill-description">Conocer nuevas culturas, probar gastronomías locales y explorar rincones históricos y naturales del mundo.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-book-reader skill-icon"></i>
+                        <h3 class="skill-title">Lectura</h3>
+                        <p class="skill-description">Sumérgeme en mundos de ciencia ficción y fantasía, explorando ideas y expandiendo mi imaginación.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-futbol skill-icon"></i>
+                        <h3 class="skill-title">Deportes de Equipo</h3>
+                        <p class="skill-description">Disfruto la camaradería y el desafío del fútbol y otros deportes de equipo, manteniendo un estilo de vida activo.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-utensils skill-icon"></i>
+                        <h3 class="skill-title">Gastronomía</h3>
+                        <p class="skill-description">Explorar la diversidad culinaria, descubrir nuevos restaurantes y experimentar con sabores diferentes.</p>
                     </div>
                 </div>
             </div>
@@ -166,7 +522,6 @@
             setTimeout(typeMessagePersonal, typeSpeed);
         }
         
-        // Start typing animation for personal page
         typeMessagePersonal();
 
         // Current year for the footer
@@ -182,6 +537,8 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                } else {
+                    // entry.target.classList.remove('visible'); // Optional: uncomment if you want animation to re-trigger on scroll back up
                 }
             });
         }, observerOptions);
@@ -190,26 +547,21 @@
             observer.observe(el);
         });
 
-        // Smooth scroll for navigation (re-used from index.html)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
         // Mobile menu toggle (re-used from index.html)
         const menuToggle = document.querySelector('.menu-toggle');
         const mainNav = document.querySelector('.main-nav');
         
         menuToggle.addEventListener('click', () => {
-            mainNav.style.display = mainNav.style.display === 'block' ? 'none' : 'block';
+            mainNav.classList.toggle('active'); // Use toggle for better mobile menu behavior
+        });
+
+        // Hide mobile menu when a link is clicked
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                }
+            });
         });
 
         // Header scroll effect (re-used from index.html)
@@ -222,16 +574,6 @@
                 header.style.transform = 'translateY(0)';
             }
             lastScrollY = window.scrollY;
-        });
-
-        // Parallax effect for floating elements (re-used from index.html)
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            const floatingElements = document.querySelectorAll('.floating-element');
-            floatingElements.forEach((element, index) => {
-                element.style.transform = `translateY(${rate * (index + 1) * 0.1}px)`;
-            });
         });
     </script>
 </body>

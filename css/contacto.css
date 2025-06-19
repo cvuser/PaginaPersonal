@@ -75,11 +75,14 @@
       margin-bottom: 2rem;
       font-size: 2rem;
       text-align: center;
+      align-items: center;
+    }
+    .section-title h2 {
+     text-align: center; /* Alinea el título al centro */
     }
 
     .contact-info .section-title,
     .contact-form .section-title {
-        text-align: left; /* Alinea los títulos dentro de las cajas */
     }
 
 
