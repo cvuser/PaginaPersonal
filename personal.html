@@ -123,7 +123,7 @@
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
         }
 
-        /* Quick Menu (Mantiene los estilos consistentes con index.html) */
+        /* Quick Menu (Mantiene los estilos consistentes con PaginaPersonal/index.html) */
         .quick-menu {
             background-color: var(--bg-secondary);
             padding: 6rem 2rem;
@@ -175,7 +175,7 @@
             color: var(--text-secondary);
         }
 
-        /* About Section (Mantiene los estilos consistentes con index.html) */
+        /* About Section (Mantiene los estilos consistentes con PaginaPersonal/index.html) */
         .about-section {
             background: var(--bg-primary);
             padding: 6rem 2rem;
@@ -231,7 +231,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Skills Section (Mantiene los estilos consistentes con index.html) */
+        /* Skills Section (Mantiene los estilos consistentes con PaginaPersonal/index.html) */
         .skills-section {
             background: var(--bg-secondary);
             padding: 6rem 2rem;
@@ -355,11 +355,11 @@
 
     <header class="main-header">
         <div class="header-container">
-            <a href="index.html" class="logo">CVG</a>
+            <a href="PaginaPersonal/index.html" class="logo">CVG</a>
             <button class="menu-toggle" aria-label="Abrir menú">☰</button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="PaginaPersonal/index.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="PaginaPersonal/profesional.html"><i class="fas fa-briefcase"></i> Profesional</a></li>
                     <li><a href="PaginaPersonal/personal.html" class="active"><i class="fas fa-user"></i> Personal</a></li>
                     <li><a href="PaginaPersonal/contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
@@ -527,7 +527,7 @@
         // Current year for the footer
         document.getElementById('current-year-personal').textContent = new Date().getFullYear();
 
-        // Scroll animations (re-used from index.html)
+        // Scroll animations (re-used from PaginaPersonal/index.html)
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -547,7 +547,7 @@
             observer.observe(el);
         });
 
-        // Mobile menu toggle (re-used from index.html)
+        // Mobile menu toggle (re-used from PaginaPersonal/index.html)
         const menuToggle = document.querySelector('.menu-toggle');
         const mainNav = document.querySelector('.main-nav');
         
@@ -564,7 +564,7 @@
             });
         });
 
-        // Header scroll effect (re-used from index.html)
+        // Header scroll effect (re-used from PaginaPersonal/index.html)
         let lastScrollY = window.scrollY;
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.main-header');
