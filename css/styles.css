@@ -447,8 +447,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    width: 100%;
-    max-width: 900px;
+    width: 975px;
     margin-top: 1.5rem;
 }
 
@@ -1301,5 +1300,77 @@ body .animated-bg {
     }
     to {
         background-position: var(--dot-gap) var(--dot-gap);
+    }
+}
+/* Centrar los cuadraditos de habilidades técnicas */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 2rem; /* Espaciado entre los elementos */
+    margin-top: 2rem;
+}
+
+.skill-category {
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido dentro de cada cuadrado */
+    width: 300px; /* Tamaño máximo para los cuadraditos */
+}
+/* Hero de la página profesional */
+.hero-professional {
+    background: linear-gradient(135deg,  0%, var(--color-vibrant-green) 100%);
+    padding: 8rem 2rem;
+    text-align: center;
+    color: var(--text-primary);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-professional::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(78, 205, 196, 0.3), transparent 50%),
+                radial-gradient(circle at bottom right, rgba(255, 107, 107, 0.3), transparent 50%);
+    background-size: 200% 200%;
+    animation: moveBackground 20s ease infinite alternate;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.hero-professional h1 {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    margin-bottom: 0.8rem;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-professional p {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-primary);
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
     }
 }
