@@ -284,6 +284,127 @@
             color: var(--text-secondary);
         }
 
+        /* Setup Section */
+        .setup-section {
+            background: var(--bg-primary);
+            padding: 6rem 2rem;
+        }
+
+        .setup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .setup-category {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .setup-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .setup-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .setup-icon {
+            font-size: 3.5rem;
+            color: var(--color-vibrant-yellow);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+        }
+
+        .setup-title {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .setup-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-grow: 1;
+        }
+
+        .setup-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            text-align: left;
+        }
+
+        .setup-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .setup-item i {
+            font-size: 1.2rem;
+            color: var(--color-vibrant-blue);
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .setup-item span {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .setup-image-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+        }
+
+        .setup-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .setup-placeholder i {
+            font-size: 4rem;
+            color: var(--color-vibrant-green);
+            opacity: 0.7;
+        }
+
+        .setup-placeholder p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 0;
+        }
+
         /* Media Queries para responsividad */
         @media (max-width: 768px) {
             .hero-title {
@@ -301,14 +422,20 @@
             .quick-container, .skills-grid {
                 grid-template-columns: 1fr;
             }
+            .setup-grid {
+                grid-template-columns: 1fr;
+            }
             .about-container {
                 padding: 2rem;
             }
             .about-title {
                 font-size: 2.5rem;
             }
-            .skill-card {
+            .skill-card, .setup-card {
                 padding: 2rem 1.5rem;
+            }
+            .setup-image-container {
+                padding: 2rem;
             }
         }
 
@@ -332,13 +459,16 @@
             .quick-menu, .about-section, .skills-section {
                 padding: 4rem 1rem;
             }
-            .quick-link, .skill-card {
+            .setup-section {
+                padding: 4rem 1rem;
+            }
+            .quick-link, .skill-card, .setup-card {
                 padding: 1.5rem 1rem;
             }
-            .quick-link i, .skill-icon {
+            .quick-link i, .skill-icon, .setup-icon {
                 font-size: 3rem;
             }
-            .quick-link h3, .skill-title {
+            .quick-link h3, .skill-title, .setup-title {
                 font-size: 1.5rem;
             }
             .about-title {
@@ -346,6 +476,12 @@
             }
             .about-text {
                 font-size: 1rem;
+            }
+            .setup-image-container {
+                padding: 1.5rem;
+            }
+            .setup-placeholder i {
+                font-size: 3rem;
             }
         }
     </style>
@@ -413,8 +549,8 @@
                 <div class="avatar">🌟</div> 
                 <h2 class="about-title">Mis Intereses y Hobbies</h2>
                 <p class="about-text">
-                    Más allá del código, disfruto de la **fotografía**, la **lectura de ciencia ficción** y el **senderismo** por los paisajes de Asturias.
-                    Soy un gran aficionado a los **deportes de equipo**, especialmente el fútbol, y me encanta la **música rock y alternativa**.
+                    Más allá del código, disfruto de la <strong>fotografía</strong>, la <strong>lectura de ciencia ficción</strong> y el <strong>senderismo</strong> por los paisajes de Asturias.
+                    Soy un gran aficionado a los <strong>deportes de equipo</strong>, especialmente el fútbol, y me apasionan los <strong>videojuegos</strong> tanto retro como modernos.
                     <span style="color: var(--text-accent); font-weight: 600;">¡Siempre aprendiendo y explorando nuevas pasiones!</span>
                 </p>
                 <p class="about-text">
@@ -437,9 +573,9 @@
                         <p class="skill-description">Capturar momentos y paisajes, especialmente durante mis viajes y aventuras.</p>
                     </div>
                     <div class="skill-card">
-                        <i class="fas fa-headphones-alt skill-icon"></i> 
-                        <h3 class="skill-title">Música</h3>
-                        <p class="skill-description">Desde clásicos del rock hasta nuevas bandas, la música es mi banda sonora diaria y una fuente de inspiración.</p>
+                        <i class="fas fa-gamepad skill-icon"></i> 
+                        <h3 class="skill-title">Videojuegos</h3>
+                        <p class="skill-description">Desde clásicos retro hasta los últimos títulos, los videojuegos son mi forma favorita de relajarme y explorar mundos virtuales.</p>
                     </div>
                     <div class="skill-card">
                         <i class="fas fa-map-marked-alt skill-icon"></i> 
@@ -460,6 +596,23 @@
                         <i class="fas fa-utensils skill-icon"></i>
                         <h3 class="skill-title">Gastronomía</h3>
                         <p class="skill-description">Explorar la diversidad culinaria, descubrir nuevos restaurantes y experimentar con sabores diferentes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="setup-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Mi Setup</h2>
+                <div class="setup-grid">
+
+                <div class="setup-image-container">
+                    <div class="setup-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <img src="assets/images/FotoSetup.jpg" alt="Foto de mi setup" class="setup-photo" style="max-width: 100%; border-radius: 18px; box-shadow: 0 8px 32px rgba(78,205,196,0.18), 0 2px 8px rgba(0,0,0,0.12); margin-top: 1.5rem; margin-bottom: 0.5rem; border: 3px solid var(--color-vibrant-blue); transition: transform 0.3s cubic-bezier(.4,2,.6,1); cursor: pointer;" loading="lazy" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+                        <p style="font-size:1rem; color:var(--text-secondary); margin-top:0.5rem; font-style:italic;">
+                            Así luce mi espacio de trabajo: tecnología, comodidad y un toque personal.
+                        </p>
                     </div>
                 </div>
             </div>

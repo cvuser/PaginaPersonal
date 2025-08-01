@@ -144,37 +144,35 @@
                     <div class="skill-category">
                         <h3>Lenguajes de Programación</h3>
                         <ul class="skills-list">
-                            <li><span class="skill-name">Python</span><span class="skill-bar" data-level="85"></span></li>
-                            <li><span class="skill-name">Java</span><span class="skill-bar" data-level="80"></span></li>
-                            <li><span class="skill-name">JavaScript</span><span class="skill-bar" data-level="75"></span></li>
-                            <li><span class="skill-name">PHP</span><span class="skill-bar" data-level="60"></span></li>
-                            <li><span class="skill-name">SQL</span><span class="skill-bar" data-level="70"></span></li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Frameworks & Librerías</h3>
                         <ul class="skills-list">
-                            <li><span class="skill-name">React.js</span><span class="skill-bar" data-level="65"></span></li>
-                            <li><span class="skill-name">Spring Boot</span><span class="skill-bar" data-level="70"></span></li>
-                            <li><span class="skill-name">Laravel</span><span class="skill-bar" data-level="55"></span></li>
-                            <li><span class="skill-name">Flask/Django (Básico)</span><span class="skill-bar" data-level="50"></span></li>
+                            <li>React.js</li>
+                            <li>Spring Boot</li>
+                            <li>Laravel</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Bases de Datos</h3>
                         <ul class="skills-list">
-                            <li><span class="skill-name">MySQL</span><span class="skill-bar" data-level="75"></span></li>
-                            <li><span class="skill-name">MongoDB</span><span class="skill-bar" data-level="60"></span></li>
-                            <li><span class="skill-name">Oracle SQL</span><span class="skill-bar" data-level="50"></span></li>
+                            <li>MySQL</li>
+                            <li>Oracle SQL</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Herramientas & Otros</h3>
                         <ul class="skills-list">
-                            <li><span class="skill-name">Git / GitHub</span><span class="skill-bar" data-level="80"></span></li>
-                            <li><span class="skill-name">Docker (Básico)</span><span class="skill-bar" data-level="40"></span></li>
-                            <li><span class="skill-name">Android Studio</span><span class="skill-bar" data-level="70"></span></li>
-                            <li><span class="skill-name">VS Code</span><span class="skill-bar" data-level="85"></span></li>
+                            <li>Git / GitHub</li>
+                            <li>Docker</li>
+                            <li>Android Studio</li>
+                            <li>VS Code</li>
                         </ul>
                     </div>
                 </div>
@@ -207,7 +205,7 @@
                 </ul>
             </div>
         </section>
-
+    
         <section class="additional-info fade-in">
             <div class="container">
                 <h2 class="section-title">Datos de Interés</h2>
@@ -285,19 +283,12 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        // Specific animation for skill bars when their section becomes visible
-                        if (entry.target.classList.contains('skills-section')) {
-                            animateSkillBars(entry.target);
-                        }
                         // Stop observing once visible if animation is one-time
                         // observer.unobserve(entry.target); 
                     } else {
                         // Optional: remove 'visible' class if element scrolls out of view
                         // If you want the animation to re-play on scroll up/down
                         entry.target.classList.remove('visible');
-                        if (entry.target.classList.contains('skills-section')) {
-                            resetSkillBars(entry.target);
-                        }
                     }
                 });
             }, observerOptions);
@@ -342,20 +333,6 @@
             });
 
             // --- Professional Page Specific JavaScript ---
-
-            // Skill Bar Animation Logic
-            function animateSkillBars(section) {
-                section.querySelectorAll('.skill-bar').forEach(bar => {
-                    const level = bar.getAttribute('data-level');
-                    bar.style.setProperty('--skill-level', `${level}%`);
-                });
-            }
-
-            function resetSkillBars(section) {
-                section.querySelectorAll('.skill-bar').forEach(bar => {
-                    bar.style.setProperty('--skill-level', `0%`); // Reset to 0 for re-animation
-                });
-            }
 
             // PDF.js Viewer Integration
             const pdfUrl = 'assets/pdfs/cv.pdf'; // Make sure this path is correct!
