@@ -1,0 +1,374 @@
+/* Estilos específicos para la página deportiva - Temática Phonk Brasileño */
+:root {
+  --phonk-dark: #0a0a0a;
+  --phonk-purple: #6d28d9;
+  --phonk-cyan: #00ffff;
+  --phonk-pink: #ff00ff;
+  --phonk-orange: #ff4500;
+  --phonk-gold: #ffd700;
+  --phonk-gradient: linear-gradient(135deg, var(--phonk-purple), var(--phonk-cyan));
+  --phonk-glow: 0 0 20px rgba(109, 40, 217, 0.6);
+  --phonk-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+.sports-page {
+  background: var(--phonk-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.sports-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(109, 40, 217, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 0, 255, 0.08) 0%, transparent 50%);
+  z-index: -1;
+  animation: phonkPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes phonkPulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(1.05); }
+}
+
+/* Header específico para deportivo */
+.sports-page .main-header {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--phonk-purple);
+  box-shadow: 0 4px 20px rgba(109, 40, 217, 0.3);
+}
+
+.sports-page .logo {
+  background: var(--phonk-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  text-shadow: var(--phonk-glow);
+  animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+  0% { filter: drop-shadow(0 0 5px var(--phonk-purple)); }
+  100% { filter: drop-shadow(0 0 15px var(--phonk-cyan)); }
+}
+
+/* Sección de video con estilo phonk */
+.sports-video {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(109, 40, 217, 0.1)) !important;
+  padding: 6rem 0 4rem 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.sports-video::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 0, 255, 0.1) 50%, transparent 70%);
+  animation: phonkSweep 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes phonkSweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.sports-video .container {
+  position: relative;
+  z-index: 2;
+}
+
+.sports-video .section-title {
+  color: var(--phonk-gold) !important;
+  text-shadow: 
+    0 0 10px var(--phonk-orange),
+    0 0 20px var(--phonk-orange),
+    0 0 30px var(--phonk-orange) !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  animation: titlePulse 3s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.video-container {
+  position: relative;
+  z-index: 3;
+}
+
+.video-container video {
+  border: 3px solid var(--phonk-purple) !important;
+  box-shadow: 
+    0 0 20px var(--phonk-purple),
+    0 0 40px rgba(109, 40, 217, 0.5),
+    inset 0 0 20px rgba(0, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.video-container video:hover {
+  transform: scale(1.02);
+  box-shadow: 
+    0 0 30px var(--phonk-cyan),
+    0 0 60px rgba(0, 255, 255, 0.6),
+    inset 0 0 30px rgba(255, 0, 255, 0.2) !important;
+}
+
+.video-description p {
+  color: var(--phonk-cyan) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6) !important;
+  letter-spacing: 1px !important;
+}
+
+/* Sección de logros con estilo phonk */
+.achievements {
+  background: rgba(10, 10, 10, 0.8);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.achievements .section-title {
+  color: var(--phonk-pink);
+  text-shadow: 
+    0 0 10px var(--phonk-pink),
+    0 0 20px var(--phonk-pink);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.2), rgba(0, 255, 255, 0.1));
+  border: 2px solid var(--phonk-purple);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--phonk-shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.achievement-card:hover::before {
+  opacity: 1;
+  animation: cardSweep 1s ease;
+}
+
+@keyframes cardSweep {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: var(--phonk-cyan);
+  box-shadow: 
+    0 20px 40px rgba(0, 255, 255, 0.3),
+    0 0 30px var(--phonk-cyan);
+}
+
+.achievement-icon {
+  font-size: 4rem;
+  color: var(--phonk-gold);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px var(--phonk-orange);
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.achievement-card h3 {
+  color: var(--phonk-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievement-card p {
+  color: #cccccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Galería deportiva con estilo phonk */
+.sports-gallery {
+  background: rgba(10, 10, 10, 0.9);
+  padding: 6rem 0;
+}
+
+.sports-gallery .section-title {
+  color: var(--phonk-orange);
+  text-shadow: 
+    0 0 10px var(--phonk-orange),
+    0 0 20px var(--phonk-orange);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--phonk-shadow);
+  transition: all 0.3s ease;
+  border: 2px solid var(--phonk-purple);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  border-color: var(--phonk-pink);
+  box-shadow: 
+    0 15px 30px rgba(255, 0, 255, 0.4),
+    0 0 25px var(--phonk-pink);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.gallery-item:hover img {
+  filter: brightness(1) contrast(1.3) saturate(1.2);
+  transform: scale(1.1);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10, 10, 10, 0.9));
+  color: var(--phonk-cyan);
+  padding: 1.5rem 1rem 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover figcaption {
+  transform: translateY(0);
+}
+
+/* Footer específico para deportivo */
+.sports-page .main-footer {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(109, 40, 217, 0.2));
+  border-top: 2px solid var(--phonk-purple);
+  backdrop-filter: blur(20px);
+}
+
+.sports-page .social-links a {
+  color: var(--phonk-cyan);
+  transition: all 0.3s ease;
+}
+
+.sports-page .social-links a:hover {
+  color: var(--phonk-pink);
+  text-shadow: 0 0 10px var(--phonk-pink);
+  transform: scale(1.2);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .sports-video {
+    padding: 4rem 0 3rem 0 !important;
+  }
+  
+  .sports-video .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .video-container video {
+    height: 300px !important;
+  }
+  
+  .achievements-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .achievement-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container video {
+    height: 200px !important;
+  }
+  
+  .sports-video .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .achievement-card h3 {
+    font-size: 1.2rem;
+  }
+}
