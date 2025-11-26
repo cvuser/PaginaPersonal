@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Carlos Velasco</title>
+  <link rel="stylesheet" href="css/styles_premium.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .contact-form {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">CV.</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="profesional.html" class="nav-link">Profesional</a>
+        <a href="personal.html" class="nav-link">Personal</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" style="min-height: 50vh;">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Hablemos</h1>
+      <p class="hero-subtitle">¿Tienes un proyecto en mente o simplemente quieres saludar? Estoy aquí para escucharte.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="container" style="padding-bottom: 6rem;">
+    <div class="grid-3" style="grid-template-columns: 1fr 2fr; gap: 4rem;">
+      <!-- Contact Info -->
+      <div>
+        <h2 style="margin-bottom: 2rem;">Información</h2>
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <div class="card" style="padding: 1.5rem;">
+            <i class="fas fa-envelope" style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Email</h3>
+            <p style="color: var(--text-muted);">c2003velasco@gmail.com</p>
+          </div>
+          <div class="card" style="padding: 1.5rem;">
+            <i class="fas fa-phone" style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Teléfono</h3>
+            <p style="color: var(--text-muted);">654 658 492</p>
+          </div>
+          <div class="card" style="padding: 1.5rem;">
+            <i class="fas fa-map-marker-alt" style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Ubicación</h3>
+            <p style="color: var(--text-muted);">Oviedo, Asturias, España</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <h2 style="margin-bottom: 2rem;">Envíame un mensaje</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" class="form-control" placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="tu@email.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" class="form-control" placeholder="¿En qué puedo ayudarte?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">CV.</div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" class="social-link"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/cvuser" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" class="social-link"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Carlos Velasco García. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

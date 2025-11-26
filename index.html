@@ -1,16 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tu Título</title>
-  </head>
-  <body>
-<!-- Solo deja este div -->
-<div id="root"></div>
 
-<!-- Y cambia el script a main.jsx (o main.tsx si usas TypeScript) -->
-<script type="module" src="/src/main.jsx"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Velasco | Full Stack Developer</title>
+  <link rel="stylesheet" href="css/styles_premium.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
-  </body>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">CV.</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="profesional.html" class="nav-link">Profesional</a>
+        <a href="personal.html" class="nav-link">Personal</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge animate-float">
+        <i class="fas fa-rocket"></i> Full Stack Developer
+      </div>
+      <h1 class="hero-title">
+        Creando experiencias
+        <span>Digitales Únicas</span>
+      </h1>
+      <p class="hero-subtitle">
+        Hola, soy Carlos Velasco García. Transformo ideas complejas en soluciones web elegantes y eficientes.
+        Especialista en React, Spring Boot y Migración de Datos.
+      </p>
+      <div class="hero-buttons">
+        <a href="profesional.html" class="btn btn-primary">
+          <i class="fas fa-briefcase"></i> Ver Portafolio
+        </a>
+        <a href="contacto.html" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i> Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Access Section -->
+  <section class="container" style="margin-top: -50px; position: relative; z-index: 10;">
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Desarrollo Web</h3>
+        <p>Experiencia en la creación de aplicaciones web modernas y escalables utilizando las últimas tecnologías del
+          mercado.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Data Migration</h3>
+        <p>Especialista en asegurar la integridad y eficiencia en la transferencia de grandes volúmenes de datos.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>Automatización</h3>
+        <p>Optimización de flujos de trabajo mediante scripts personalizados en Python para ahorrar tiempo y recursos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="container" style="padding: 6rem 2rem;">
+    <h2 class="section-title">Explora mi Mundo</h2>
+    <div class="grid-3">
+      <a href="profesional.html" class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.5rem;">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Profesional</h3>
+        <p>Mi trayectoria, habilidades técnicas y proyectos destacados.</p>
+      </a>
+      <a href="personal.html" class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.5rem;">
+          <i class="fas fa-user-astronaut"></i>
+        </div>
+        <h3>Personal</h3>
+        <p>Mis hobbies, pasiones y lo que me inspira día a día.</p>
+      </a>
+      <a href="contacto.html" class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.5rem;">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h3>Contacto</h3>
+        <p>¿Tienes una idea? Hablemos y hagámosla realidad.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">CV.</div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" class="social-link"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/cvuser" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" class="social-link"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Carlos Velasco García. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

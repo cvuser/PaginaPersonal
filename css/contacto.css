@@ -1,0 +1,257 @@
+  .contact-hero {
+      position: relative;
+      display: flex;
+      flex-direction: column; /* Alinea los elementos verticalmente */
+      align-items: center;
+      justify-content: center;
+      min-height: 350px; /* Un poco más compacto que el index */
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: var(--header-shadow);
+      padding: 2rem 1rem;
+    }
+
+    .contact-hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.8rem;
+      color: white;
+    }
+
+    .contact-hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Estilos de la sección de contacto (grid) */
+    .contact-section {
+      padding: 4rem 0;
+      background-color: var(--background-color-light); /* Fondo ligeramente diferente */
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* Una columna por defecto */
+      gap: 3rem; /* Espacio entre columnas */
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1.5fr; /* Info a la izquierda, formulario más ancho a la derecha */
+      }
+    }
+
+    .contact-info, .contact-form {
+      background-color: var(--card-background);
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: var(--card-shadow);
+      animation: fadeIn 0.8s ease-out forwards; /* Añade animación fade-in */
+      opacity: 0; /* Oculto por defecto para la animación */
+      transform: translateY(20px); /* Ligeramente desplazado para el efecto */
+    }
+    
+    .contact-section.visible .contact-info, 
+    .contact-section.visible .contact-form {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .contact-section.visible .contact-info {
+        transition-delay: 0.2s; /* Ligero retraso para contact-info */
+    }
+    .contact-section.visible .contact-form {
+        transition-delay: 0.4s; /* Más retraso para contact-form */
+    }
+
+
+    .section-title {
+      color: var(--heading-color);
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      text-align: center;
+      align-items: center;
+    }
+    .section-title h2 {
+     text-align: center; /* Alinea el título al centro */
+    }
+
+    .contact-info .section-title,
+    .contact-form .section-title {
+    }
+
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--text-color);
+    }
+
+    .info-list li i {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+    }
+
+    .info-list .call-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .info-list .call-button:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .social-contact {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: flex-start; /* Alinea los iconos a la izquierda */
+      margin-top: 1.5rem;
+    }
+
+    .social-contact .social-link {
+      font-size: 2rem;
+      color: var(--text-color-light);
+      transition: color 0.3s ease;
+    }
+
+    .social-contact .social-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Estilos del formulario */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--heading-color);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: var(--input-background); /* Color de fondo para inputs */
+      color: var(--text-color);
+      font-size: 1rem;
+      box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2); /* Sombra al enfocar */
+    }
+
+    .form-group textarea {
+      resize: vertical; /* Permite redimensionar verticalmente */
+      min-height: 120px;
+    }
+
+    .btn-primary {
+      width: 100%; /* Botón ocupa todo el ancho */
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px); /* Pequeño efecto al pasar el ratón */
+    }
+
+    /* Notificación Toast */
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1000;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s ease-in-out;
+    }
+
+    .toast.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .toast.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    /* Ensure header styles from main.css apply to professional page */
+    .main-header {
+      /* Your existing header styles, like position: sticky, background, etc. */
+      background-color: var(--header-background); /* Example */
+      box-shadow: var(--header-shadow); /* Example */
+      transition: transform 0.3s ease-out; /* For hide/show on scroll */
+    }
+
+    .main-nav ul {
+      /* Mobile menu hiding */
+      display: none; /* Hidden by default on mobile */
+      flex-direction: column; /* Stack vertically on mobile */
+      position: absolute; /* Position over content */
+      top: 100%; /* Below header */
+      left: 0;
+      width: 100%;
+      background-color: var(--header-background);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .main-nav.active ul {
+      display: flex; /* Show when active */
+    }
+
+    @media (min-width: 768px) {
+      .main-nav ul {
+        display: flex; /* Always show on desktop */
+        flex-direction: row; /* Horizontal on desktop */
+        position: static; /* Reset position */
+        box-shadow: none; /* Remove shadow */
+      }
+      .menu-toggle {
+        display: none; /* Hide toggle button on desktop */
+      }
+    }

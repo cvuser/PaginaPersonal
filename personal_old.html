@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal | Carlos Velasco García</title>
+<link href="css/styles_mejorado.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="hero">
+<div class="hero-overlay">
+<div class="hero-content">
+<h1>Sección</h1>
+<p>Descripción de la sección</p>
+</div>
+</div>
+</header>
+
+
+<main><section><section data-animate="">
+<section class="hero" data-animate="">
+<div class="hero-content">
+<h1 class="hero-title">¿Quién soy fuera del trabajo?</h1>
+<p class="hero-subtitle">Descubre mis hobbies, pasiones e intereses personales.</p>
+<div class="typed-text-personal" id="typed-text-personal"></div>
+<div class="cta-buttons">
+<a class="btn btn-primary" href="profesional.html">
+<i class="fas fa-briefcase"></i> Mi Perfil Profesional
+                    </a>
+<a class="btn btn-secondary" href="contacto.html">
+<i class="fas fa-paper-plane"></i> ¡Hablemos!
+                    </a>
+</div>
+</div>
+</section>
+<section class="quick-menu fade-in" data-animate="">
+<div class="container">
+<h2 class="section-title">Navegación Rápida</h2>
+<div class="quick-container">
+<a class="quick-link" href="profesional.html">
+<i class="fas fa-laptop-code"></i>
+<h3>Profesional</h3>
+<p>Descubre mi experiencia y proyectos.</p>
+</a>
+<a class="quick-link" href="personal.html">
+<i class="fas fa-star"></i>
+<h3>Personal</h3>
+<p>Conoce más sobre mis intereses.</p>
+</a>
+<a class="quick-link" href="contacto.html">
+<i class="fas fa-paper-plane"></i>
+<h3>Contacto</h3>
+<p>¡Hablemos de tu próximo proyecto!</p>
+</a>
+</div>
+</div>
+</section>
+<section class="about-section fade-in" data-animate="">
+<div class="about-container">
+<div class="avatar">🌟</div>
+<h2 class="about-title">Mis Intereses y Hobbies</h2>
+<p class="about-text">
+                    Más allá del código, disfruto de la **fotografía**, la **lectura de ciencia ficción** y el **senderismo** por los paisajes de Asturias.
+                    Soy un gran aficionado a los **deportes de equipo**, especialmente el fútbol, y me encanta la **música rock y alternativa**.
+                    <span style="color: var(--text-accent); font-weight: 600;">¡Siempre aprendiendo y explorando nuevas pasiones!</span>
+</p>
+<p class="about-text">
+                    En mi tiempo libre, me gusta **descubrir nuevos restaurantes** y **viajar a lugares con historia**. También dedico tiempo a **proyectos personales de programación** que no están relacionados con el trabajo.
+                    Creo firmemente en el **equilibrio entre el trabajo y la vida personal** para un desarrollo integral.
+                </p>
+<a class="btn btn-primary" href="contacto.html">
+<i class="fas fa-envelope"></i> Conectar conmigo
+                </a>
+</div>
+</section>
+<section class="skills-section fade-in" data-animate="">
+<div class="container">
+<h2 class="section-title">Lo que me apasiona</h2>
+<div class="skills-grid">
+<div class="skill-card">
+<i class="fas fa-camera skill-icon"></i>
+<h3 class="skill-title">Fotografía</h3>
+<p class="skill-description">Capturar momentos y paisajes, especialmente durante mis viajes y aventuras.</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-headphones-alt skill-icon"></i>
+<h3 class="skill-title">Música</h3>
+<p class="skill-description">Desde clásicos del rock hasta nuevas bandas, la música es mi banda sonora diaria y una fuente de inspiración.</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-map-marked-alt skill-icon"></i>
+<h3 class="skill-title">Viajar</h3>
+<p class="skill-description">Conocer nuevas culturas, probar gastronomías locales y explorar rincones históricos y naturales del mundo.</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-book-reader skill-icon"></i>
+<h3 class="skill-title">Lectura</h3>
+<p class="skill-description">Sumérgeme en mundos de ciencia ficción y fantasía, explorando ideas y expandiendo mi imaginación.</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-futbol skill-icon"></i>
+<h3 class="skill-title">Deportes de Equipo</h3>
+<p class="skill-description">Disfruto la camaradería y el desafío del fútbol y otros deportes de equipo, manteniendo un estilo de vida activo.</p>
+</div>
+<div class="skill-card">
+<i class="fas fa-utensils skill-icon"></i>
+<h3 class="skill-title">Gastronomía</h3>
+<p class="skill-description">Explorar la diversidad culinaria, descubrir nuevos restaurantes y experimentar con sabores diferentes.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="main-footer">
+<div class="footer-container">
+<p>© <span id="current-year-personal"></span> Carlos Velasco García. Todos los derechos reservados.</p>
+<div class="social-links">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+<a aria-label="GitHub" href="https://github.com/cvuser" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+<a aria-label="Instagram" href="https://www.instagram.com/_carlos_velasco_" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Typing animation for personal page
+        const typedElementPersonal = document.getElementById('typed-text-personal');
+        const personalMessages = [
+            "Conoce mis intereses fuera del trabajo 🎨",
+            "Descubre mis hobbies y pasiones",
+            "Mi vida más allá del código",
+            "¡Un viaje por mis aficiones!"
+        ];
+        
+        let messageIndexPersonal = 0;
+        let charIndexPersonal = 0;
+        let isDeletingPersonal = false;
+        
+        function typeMessagePersonal() {
+            const currentMessage = personalMessages[messageIndexPersonal];
+            
+            if (isDeletingPersonal) {
+                typedElementPersonal.textContent = currentMessage.substring(0, charIndexPersonal - 1);
+                charIndexPersonal--;
+            } else {
+                typedElementPersonal.textContent = currentMessage.substring(0, charIndexPersonal + 1);
+                charIndexPersonal++;
+            }
+            
+            let typeSpeed = isDeletingPersonal ? 50 : 100;
+            
+            if (!isDeletingPersonal && charIndexPersonal === currentMessage.length) {
+                typeSpeed = 2000;
+                isDeletingPersonal = true;
+            } else if (isDeletingPersonal && charIndexPersonal === 0) {
+                isDeletingPersonal = false;
+                messageIndexPersonal = (messageIndexPersonal + 1) % personalMessages.length;
+                typeSpeed = 500;
+            }
+            
+            setTimeout(typeMessagePersonal, typeSpeed);
+        }
+        
+        typeMessagePersonal();
+
+        // Current year for the footer
+        document.getElementById('current-year-personal').textContent = new Date().getFullYear();
+
+        // Scroll animations (re-used from index.html)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    // entry.target.classList.remove('visible'); // Optional: uncomment if you want animation to re-trigger on scroll back up
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (re-used from index.html)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active'); // Use toggle for better mobile menu behavior
+        });
+
+        // Hide mobile menu when a link is clicked
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                }
+            });
+        });
+
+        // Header scroll effect (re-used from index.html)
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+<footer>
+<p>© 2025 Carlos Velasco García — Todos los derechos reservados.</p>
+</footer>
+</section></section></main><footer><p>© 2025 Carlos Velasco García</p></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Scroll-to-top button
+  const scrollTopBtn = document.createElement("button");
+  scrollTopBtn.id = "scrollTopBtn";
+  scrollTopBtn.innerText = "↑ Arriba";
+  document.body.appendChild(scrollTopBtn);
+
+  window.addEventListener("scroll", () => {
+    scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Animaciones con IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesional | Carlos Velasco</title>
+  <link rel="stylesheet" href="css/styles_premium.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .timeline-item {
+      margin-bottom: 3rem;
+      position: relative;
+      width: 50%;
+      padding: 0 2rem;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -10px;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 0.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        text-align: left !important;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: 10px;
+        right: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">CV.</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="profesional.html" class="nav-link active">Profesional</a>
+        <a href="personal.html" class="nav-link">Personal</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" style="min-height: 60vh;">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Trayectoria <span>Profesional</span></h1>
+      <p class="hero-subtitle">Mi camino en el mundo del desarrollo, la educación y la tecnología.</p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="container" style="padding-bottom: 4rem;">
+    <h2 class="section-title">Experiencia & Educación</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <h3>Metadata Processing Technician</h3>
+          <p style="color: var(--accent); margin-bottom: 0.5rem;">Applus+ · Feb 2025 - Actualidad</p>
+          <p>Preparación de metadatos para migración de BBDD y filtración de documentos técnicos.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <h3>Técnico en DAW</h3>
+          <p style="color: var(--accent); margin-bottom: 0.5rem;">CIFP La Laboral · Sept 2024 - Actualidad</p>
+          <p>Desarrollo web completo: frontend y backend con frameworks modernos.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <h3>Programador Python para IA</h3>
+          <p style="color: var(--accent); margin-bottom: 0.5rem;">EOI · Sept 2024 - Ene 2025</p>
+          <p>Programación aplicada a machine learning e inteligencia artificial.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <h3>Prácticas en DXC Technology</h3>
+          <p style="color: var(--accent); margin-bottom: 0.5rem;">Avilés · Mar 2023 - Jun 2023</p>
+          <p>Desarrollo backend en entorno Java para aplicaciones empresariales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="container" style="padding: 4rem 2rem;">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-code"></i></div>
+        <h3>Lenguajes</h3>
+        <div>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Frameworks</h3>
+        <div>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Laravel</span>
+          <span class="skill-tag">Flask</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-tools"></i></div>
+        <h3>Herramientas</h3>
+        <div>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Android Studio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CV -->
+  <section class="container" style="text-align: center; padding: 4rem 0;">
+    <div class="card" style="display: inline-block; max-width: 600px;">
+      <h3>¿Quieres saber más?</h3>
+      <p style="margin-bottom: 2rem;">Descarga mi currículum completo en formato PDF para ver todos los detalles.</p>
+      <a href="assets/pdfs/cv.pdf" target="_blank" class="btn btn-primary">
+        <i class="fas fa-download"></i> Descargar CV
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">CV.</div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/carlos-velasco-garc%C3%ADa" target="_blank" class="social-link"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/cvuser" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/_carlos_velasco_" target="_blank" class="social-link"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Carlos Velasco García. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
