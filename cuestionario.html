@@ -2,586 +2,608 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿Cenamos Juntos? | Planificador de Cena Especial</title>
-  <link rel="stylesheet" href="css/styles_premium.css">
-  <link rel="stylesheet" href="css/cuestionario.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cenamos Juntos? | Planificador de Cena Especial</title>
+    <link rel="stylesheet" href="css/styles_premium.css">
+    <link rel="stylesheet" href="css/cuestionario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="romantic-page">
-  <!-- Partículas flotantes de fondo -->
-  <div class="heart-particles" id="heartParticlesContainer"></div>
+    <!-- Partículas flotantes de fondo -->
+    <div class="heart-particles" id="heartParticlesContainer"></div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">CV.</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="profesional.html" class="nav-link">Profesional</a>
-        <a href="personal.html" class="nav-link active">Personal</a>
-        <a href="contacto.html" class="nav-link">Contacto</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Seccion Principal del Cuestionario -->
-  <section class="cuestionario-section">
-    <div class="cuestionario-container">
-      
-      <!-- Progress Bar (Oculta en intro y ticket) -->
-      <div class="progress-container" id="progressBarContainer" style="display: none;">
-        <div class="progress-bar-bg">
-          <div class="progress-bar-fill" id="progressBarFill"></div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">CV.</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="profesional.html" class="nav-link">Profesional</a>
+                <a href="personal.html" class="nav-link active">Personal</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </div>
         </div>
-        <span class="progress-text" id="progressText">Paso 1 de 4</span>
-      </div>
+    </nav>
 
-      <!-- STEP 0: INTRO HERO -->
-      <div class="step-card active intro-hero" id="step0">
-        <span class="intro-icon">💌</span>
-        <h2>Hola... Tengo una pregunta especial para ti</h2>
-        <p class="step-subtitle">Me haría mucha ilusión invitarte a cenar. ¿Qué me dices, te animas? ✨</p>
-        
-        <div class="button-group-intro" id="introButtonGroup">
-          <button class="btn-romantic" onclick="startQuestionnaire()">
-            ¡Sí, claro! 😍
-          </button>
-          <button class="btn-no" id="btnNo" onmouseover="escapeButton()" onclick="escapeButton()">
-            Me lo pensé mejor y... No... 😢
-          </button>
+    <!-- Seccion Principal del Cuestionario -->
+    <section class="cuestionario-section">
+        <div class="cuestionario-container">
+
+            <!-- Progress Bar (Oculta en intro y ticket) -->
+            <div class="progress-container" id="progressBarContainer" style="display: none;">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">Paso 1 de 4</span>
+            </div>
+
+            <!-- STEP 0: INTRO HERO -->
+            <div class="step-card active intro-hero" id="step0">
+                <span class="intro-icon">💌</span>
+                <h2>Hola... Tengo una pregunta especial para ti</h2>
+                <p class="step-subtitle">Me haría mucha ilusión invitarte a cenar. ¿Qué me dices, te animas? ✨</p>
+
+                <div class="button-group-intro" id="introButtonGroup">
+                    <button class="btn-romantic" onclick="startQuestionnaire()">
+                        ¡Sí, claro! 😍
+                    </button>
+                    <button class="btn-no" id="btnNo" onmouseover="escapeButton()" onclick="escapeButton()">
+                        Me lo pense mejor y... No... 😢
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 1: FOOD TYPE -->
+            <div class="step-card" id="step1">
+                <h2>¿Qué tipo de comida te apetece?</h2>
+                <p class="step-subtitle">Puedes seleccionar más de una opción si tienes dudas 😋</p>
+
+                <div class="options-grid">
+                    <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Italiana" data-emoji="🍕">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🍕</span>
+                            <span class="option-title">Italiana</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Sushi/Asiática"
+                        data-emoji="🍣">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🍣</span>
+                            <span class="option-title">Sushi/Asiática</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Mexicana" data-emoji="🌮">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🌮</span>
+                            <span class="option-title">Mexicana</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Gourmet/Carne"
+                        data-emoji="🥩">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🥩</span>
+                            <span class="option-title">Gourmet/Carne</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Hamburguesas"
+                        data-emoji="🍔">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🍔</span>
+                            <span class="option-title">Hamburguesa</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Tapas/Española"
+                        data-emoji="🥘">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🥘</span>
+                            <span class="option-title">Tapas/Española</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
+                    <button class="btn-romantic" onclick="validateAndNext(1)">Siguiente <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 2: VIBE / AMBIENTE -->
+            <div class="step-card" id="step2">
+                <h2>¿Qué tipo de ambiente prefieres?</h2>
+                <p class="step-subtitle">Selecciona tu atmósfera favorita para la velada ✨</p>
+
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Romántico & Velas"
+                        data-emoji="🕯️">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🕯️</span>
+                            <span class="option-title">Romántico</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Moderno & Chill"
+                        data-emoji="🎵">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🎵</span>
+                            <span class="option-title">Moderno/Chill</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Terraza con Vistas"
+                        data-emoji="🌌">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🌌</span>
+                            <span class="option-title">Terraza/Vistas</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Íntimo & Secreto"
+                        data-emoji="🤫">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🤫</span>
+                            <span class="option-title">Íntimo/Secreto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
+                    <button class="btn-romantic" onclick="validateAndNext(2)">Siguiente <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 3: DAY OF THE DATE -->
+            <div class="step-card" id="step3">
+                <h2>¿Qué día te vendría mejor?</h2>
+                <p class="step-subtitle">Elige una fecha para reservar en nuestras agendas 📅</p>
+
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Viernes" data-emoji="📅">
+                        <div class="option-card-content">
+                            <span class="option-emoji">📅</span>
+                            <span class="option-title">Viernes</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Sábado" data-emoji="🗓️">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🗓️</span>
+                            <span class="option-title">Sábado</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Domingo" data-emoji="🥞">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🥞</span>
+                            <span class="option-title">Domingo</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Cualquier día laborable"
+                        data-emoji="🚀">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🚀</span>
+                            <span class="option-title">Entre semana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
+                    <button class="btn-romantic" onclick="validateAndNext(3)">Siguiente <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 4: DRINK -->
+            <div class="step-card" id="step4">
+                <h2>¿Con qué brindamos?</h2>
+                <p class="step-subtitle">Para celebrar el encuentro 🥂</p>
+
+                <div class="options-grid">
+                    <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Vino" data-emoji="🍷">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🍷</span>
+                            <span class="option-title">Vino</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Cerveza" data-emoji="🍺">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🍺</span>
+                            <span class="option-title">Cerveza</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Cócteles"
+                        data-emoji="🍸">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🍸</span>
+                            <span class="option-title">Cócteles</span>
+                        </div>
+                    </div>
+                    <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Refresco/Agua"
+                        data-emoji="🥤">
+                        <div class="option-card-content">
+                            <span class="option-emoji">🥤</span>
+                            <span class="option-title">Refresco/Agua</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
+                    <button class="btn-romantic" onclick="validateAndNext(4)">Siguiente <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 5: NOTES -->
+            <div class="step-card" id="step5">
+                <h2>¿Algún detalle que deba saber? (importante que respondas esto)</h2>
+                <p class="step-subtitle">Alergias, preferencias dietéticas, tu postre favorito 🤔, o cualquier detalle
+                    extra 📝</p>
+
+                <textarea class="text-area-custom" id="notesInput"
+                    placeholder="Ej: Soy vegetariana / Me encantan las terrazas / Odio el cilantro / ¡Sorpréndeme con la música!"></textarea>
+
+                <div class="wizard-actions">
+                    <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
+                    <button class="btn-romantic" onclick="compileTicket()">Generar Plan <i
+                            class="fas fa-heart"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 6: TICKET SUMMARY -->
+            <div class="step-card" id="step6">
+                <h2>¡Tenemos el plan perfecto! 🎉</h2>
+                <p class="step-subtitle">Aquí está la propuesta oficial para nuestra cita gastronómica:</p>
+
+                <!-- TICKET DE CENA -->
+                <div class="ticket-wrapper">
+                    <div class="ticket-header">
+                        <h3>Pase de Cena VIP</h3>
+                        <p>Invitación exclusiva para dos</p>
+                    </div>
+
+                    <div class="ticket-details">
+                        <div class="ticket-row">
+                            <span class="ticket-label">🍕 Comida</span>
+                            <span class="ticket-val" id="ticketFood">-</span>
+                        </div>
+                        <div class="ticket-row">
+                            <span class="ticket-label">🕯️ Ambiente</span>
+                            <span class="ticket-val" id="ticketVibe">-</span>
+                        </div>
+                        <div class="ticket-row">
+                            <span class="ticket-label">📅 Fecha</span>
+                            <span class="ticket-val" id="ticketDay">-</span>
+                        </div>
+                        <div class="ticket-row">
+                            <span class="ticket-label">🍷 Bebida</span>
+                            <span class="ticket-val" id="ticketDrink">-</span>
+                        </div>
+                        <div class="ticket-row" style="flex-direction: column; align-items: flex-start; gap: 0.3rem;">
+                            <span class="ticket-label">📝 Notas Especiales</span>
+                            <span class="ticket-val" id="ticketNotes"
+                                style="font-weight: 500; font-size: 0.95rem; text-align: left; margin-top: 0.2rem; display: block; width: 100%; border-left: 2px solid var(--romantic-primary); padding-left: 0.5rem; word-break: break-word;">-</span>
+                        </div>
+                    </div>
+
+                    <div class="ticket-footer">
+                        <div class="ticket-barcode">CENA-CON-CARLOS-2026</div>
+                        <p style="font-size: 0.75rem; color: #888; margin-top: 0.5rem;">Válido al confirmar con un
+                            mensaje</p>
+                    </div>
+                    <div class="ticket-stamp">Aceptado ❤️</div>
+                </div>
+
+                <div class="success-actions">
+                    <button class="btn btn-romantic btn-send-whatsapp" onclick="sendToWhatsapp()">
+                        <i class="fab fa-whatsapp"></i> Confirmar & Enviar a Carlos
+                    </button>
+                    <button class="btn-reset" onclick="resetQuestionnaire()">Volver a empezar</button>
+                </div>
+            </div>
+
         </div>
-      </div>
+    </section>
 
-      <!-- STEP 1: FOOD TYPE -->
-      <div class="step-card" id="step1">
-        <h2>¿Qué tipo de comida te apetece?</h2>
-        <p class="step-subtitle">Puedes seleccionar más de una opción si tienes dudas 😋</p>
-        
-        <div class="options-grid">
-          <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Italiana" data-emoji="🍕">
-            <div class="option-card-content">
-              <span class="option-emoji">🍕</span>
-              <span class="option-title">Italiana</span>
+    <!-- Footer -->
+    <footer class="footer"
+        style="padding: 2rem 0; margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.05); background: rgba(9, 3, 11, 0.95); z-index: 10;">
+        <div class="container">
+            <div class="footer-content"
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div class="logo">CV.</div>
+                <div class="copyright" style="font-size: 0.9rem; color: var(--text-muted);">
+                    <p>&copy; 2026 Carlos Velasco García.</p>
+                </div>
             </div>
-          </div>
-          <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Sushi/Asiática" data-emoji="🍣">
-            <div class="option-card-content">
-              <span class="option-emoji">🍣</span>
-              <span class="option-title">Sushi/Asiática</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Mexicana" data-emoji="🌮">
-            <div class="option-card-content">
-              <span class="option-emoji">🌮</span>
-              <span class="option-title">Mexicana</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Gourmet/Carne" data-emoji="🥩">
-            <div class="option-card-content">
-              <span class="option-emoji">🥩</span>
-              <span class="option-title">Gourmet/Carne</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Hamburguesas" data-emoji="🍔">
-            <div class="option-card-content">
-              <span class="option-emoji">🍔</span>
-              <span class="option-title">Hamburguesa</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="toggleMultiSelect(this)" data-value="Tapas/Española" data-emoji="🥘">
-            <div class="option-card-content">
-              <span class="option-emoji">🥘</span>
-              <span class="option-title">Tapas/Española</span>
-            </div>
-          </div>
         </div>
+    </footer>
 
-        <div class="wizard-actions">
-          <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="validateAndNext(1)">Siguiente <i class="fas fa-arrow-right"></i></button>
-        </div>
-      </div>
+    <!-- SCRIPT INTERACTIVO -->
+    <script>
+        // Variables de estado
+        let currentStep = 0;
+        const totalSteps = 5;
 
-      <!-- STEP 2: DAY OF THE DATE -->
-      <div class="step-card" id="step2">
-        <h2>¿Qué día te vendría mejor?</h2>
-        <p class="step-subtitle">Elige una fecha para reservar en nuestras agendas 📅</p>
-        
-        <div class="options-grid">
-          <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Viernes" data-emoji="📅">
-            <div class="option-card-content">
-              <span class="option-emoji">📅</span>
-              <span class="option-title">Viernes</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Sábado" data-emoji="🗓️">
-            <div class="option-card-content">
-              <span class="option-emoji">🗓️</span>
-              <span class="option-title">Sábado</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Domingo" data-emoji="🥞">
-            <div class="option-card-content">
-              <span class="option-emoji">🥞</span>
-              <span class="option-title">Domingo</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'day')" data-value="Cualquier día laborable" data-emoji="🚀">
-            <div class="option-card-content">
-              <span class="option-emoji">🚀</span>
-              <span class="option-title">Entre semana</span>
-            </div>
-          </div>
-        </div>
+        // Almacén de respuestas
+        const answers = {
+            foods: [], // Array para multiselección
+            vibe: null,
+            day: null,
+            drink: null,
+            notes: ''
+        };
 
-        <div class="wizard-actions">
-          <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="validateAndNext(2)">Siguiente <i class="fas fa-arrow-right"></i></button>
-        </div>
-      </div>
-
-      <!-- STEP 3: DRINK -->
-      <div class="step-card" id="step3">
-        <h2>¿Con qué brindamos?</h2>
-        <p class="step-subtitle">Para celebrar el encuentro 🥂</p>
-        
-        <div class="options-grid">
-          <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Vino" data-emoji="🍷">
-            <div class="option-card-content">
-              <span class="option-emoji">🍷</span>
-              <span class="option-title">Vino</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Cerveza" data-emoji="🍺">
-            <div class="option-card-content">
-              <span class="option-emoji">🍺</span>
-              <span class="option-title">Cerveza</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Cócteles" data-emoji="🍸">
-            <div class="option-card-content">
-              <span class="option-emoji">🍸</span>
-              <span class="option-title">Cócteles</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Matcha" data-emoji="🍵">
-            <div class="option-card-content">
-              <span class="option-emoji">🍵</span>
-              <span class="option-title">Matcha</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Refresco/Agua" data-emoji="🥤">
-            <div class="option-card-content">
-              <span class="option-emoji">🥤</span>
-              <span class="option-title">Refresco/Agua</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="wizard-actions">
-          <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="validateAndNext(3)">Siguiente <i class="fas fa-arrow-right"></i></button>
-        </div>
-      </div>
-
-      <!-- STEP 4: NOTES -->
-      <div class="step-card" id="step4">
-        <h2>¿Algún detalle que deba saber? (importante que respondas esto)</h2>
-        <p class="step-subtitle">Alergias, preferencias dietéticas, tu postre favorito 🤔, o cualquier detalle extra 📝</p>
-        
-        <textarea class="text-area-custom" id="notesInput" placeholder="Ej: Soy vegetariana / Me encantan las terrazas / Odio el cilantro / ¡Sorpréndeme con la música!"></textarea>
-
-        <div class="wizard-actions">
-          <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="compileTicket()">Generar Plan <i class="fas fa-heart"></i></button>
-        </div>
-      </div>
-
-      <!-- STEP 5: TICKET SUMMARY -->
-      <div class="step-card" id="step5">
-        <h2>¡Tenemos el plan perfecto! 🎉</h2>
-        <p class="step-subtitle">Aquí está la propuesta oficial para nuestra cita gastronómica:</p>
-        
-        <!-- TICKET DE CENA -->
-        <div class="ticket-wrapper">
-          <div class="ticket-header">
-            <h3>Pase de Cena VIP</h3>
-            <p>Invitación exclusiva para dos</p>
-          </div>
-          
-          <div class="ticket-details">
-            <div class="ticket-row">
-              <span class="ticket-label">🍕 Comida</span>
-              <span class="ticket-val" id="ticketFood">-</span>
-            </div>
-            <div class="ticket-row">
-              <span class="ticket-label">📅 Fecha</span>
-              <span class="ticket-val" id="ticketDay">-</span>
-            </div>
-            <div class="ticket-row">
-              <span class="ticket-label">🍷 Bebida</span>
-              <span class="ticket-val" id="ticketDrink">-</span>
-            </div>
-            <div class="ticket-row" style="flex-direction: column; align-items: flex-start; gap: 0.3rem;">
-              <span class="ticket-label">📝 Notas Especiales</span>
-              <span class="ticket-val" id="ticketNotes" style="font-weight: 500; font-size: 0.95rem; text-align: left; margin-top: 0.2rem; display: block; width: 100%; border-left: 2px solid var(--romantic-primary); padding-left: 0.5rem; word-break: break-word;">-</span>
-            </div>
-          </div>
-          
-          <div class="ticket-footer">
-            <div class="ticket-barcode">CENA-CON-CARLOS-2026</div>
-            <p style="font-size: 0.75rem; color: #888; margin-top: 0.5rem;">Válido al confirmar con un mensaje</p>
-          </div>
-          <div class="ticket-stamp">Aceptado ❤️</div>
-        </div>
-
-        <div class="success-actions">
-          <button class="btn btn-romantic btn-send-whatsapp" onclick="sendToWhatsapp()">
-            <i class="fab fa-whatsapp"></i> Confirmar & Enviar a Carlos
-          </button>
-          <button class="btn-reset" onclick="resetQuestionnaire()">Volver a empezar</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer" style="padding: 2rem 0; margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.05); background: rgba(9, 3, 11, 0.95); z-index: 10;">
-    <div class="container">
-      <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        <div class="logo">CV.</div>
-        <div class="copyright" style="font-size: 0.9rem; color: var(--text-muted);">
-          <p>&copy; 2026 Carlos Velasco García.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPT INTERACTIVO -->
-  <script>
-    // Variables de estado
-    let currentStep = 0;
-    const totalSteps = 4;
-    
-    // Almacén de respuestas
-    const answers = {
-      foods: [], // Array para multiselección
-      day: null,
-      drink: null,
-      notes: ''
-    };
-
-    // Inicializar partículas de fondo
-    document.addEventListener("DOMContentLoaded", () => {
-      createHeartParticles();
-    });
-
-    // Generador de partículas de corazones
-    function createHeartParticles() {
-      const container = document.getElementById("heartParticlesContainer");
-      const icons = ["❤️", "💖", "💝", "✨", "💕", "🍕", "🍷", "🍵"];
-      
-      setInterval(() => {
-        if (document.hidden) return; // Pausar si no está en pantalla activa
-        
-        const particle = document.createElement("div");
-        particle.className = "heart-particle";
-        
-        // Randomizar propiedades
-        const icon = icons[Math.floor(Math.random() * icons.length)];
-        particle.textContent = icon;
-        
-        const startX = Math.random() * 100; // Porcentaje de ancho
-        const duration = 5 + Math.random() * 6; // Entre 5 y 11 segundos
-        const fontSize = 1 + Math.random() * 1.5; // Entre 1rem y 2.5rem
-        
-        particle.style.left = `${startX}vw`;
-        particle.style.animationDuration = `${duration}s`;
-        particle.style.fontSize = `${fontSize}rem`;
-        
-        container.appendChild(particle);
-        
-        // Limpiar después de finalizar la animación
-        setTimeout(() => {
-          particle.remove();
-        }, duration * 1000);
-      }, 500); // Crear una partícula cada 500ms
-    }
-
-    // Botón "No" esquivo
-    function escapeButton() {
-      const btnNo = document.getElementById("btnNo");
-      
-      // Obtener dimensiones del botón e inyectar estilo absoluto si no lo tiene
-      btnNo.style.position = "fixed";
-      
-      // Calcular dimensiones del viewport
-      const padding = 50;
-      const maxX = window.innerWidth - btnNo.offsetWidth - padding;
-      const maxY = window.innerHeight - btnNo.offsetHeight - padding;
-      
-      // Asegurar que no se superponga directamente con el cursor inicial del evento
-      let randomX = padding + Math.random() * (maxX - padding);
-      let randomY = padding + Math.random() * (maxY - padding);
-      
-      btnNo.style.left = `${randomX}px`;
-      btnNo.style.top = `${randomY}px`;
-      
-      // Animación de escape extra
-      btnNo.style.transform = `scale(${0.9 + Math.random() * 0.2}) rotate(${(-10 + Math.random() * 20)}deg)`;
-    }
-
-    // Navegación
-    function showStep(n) {
-      // Ocultar paso actual con transición de salida
-      const activeCard = document.querySelector(".step-card.active");
-      if (activeCard) {
-        activeCard.classList.remove("active");
-      }
-      
-      currentStep = n;
-      
-      // Mostrar nuevo paso
-      const nextCard = document.getElementById(`step${n}`);
-      setTimeout(() => {
-        nextCard.classList.add("active");
-      }, 50);
-
-      // Mostrar/Ocultar barra de progreso
-      const progressContainer = document.getElementById("progressBarContainer");
-      if (n > 0 && n < 5) {
-        progressContainer.style.display = "flex";
-        // Calcular porcentaje
-        const percentage = ((n - 1) / (totalSteps - 1)) * 100;
-        document.getElementById("progressBarFill").style.width = `${percentage}%`;
-        document.getElementById("progressText").textContent = `Paso ${n} de ${totalSteps}`;
-      } else {
-        progressContainer.style.display = "none";
-      }
-
-      // Desplazarse arriba suavemente en móvil
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function startQuestionnaire() {
-      // Lanzar ráfaga de corazones al aceptar
-      burstHearts(15);
-      showStep(1);
-    }
-
-    function prevStep() {
-      if (currentStep > 1) {
-        showStep(currentStep - 1);
-      } else if (currentStep === 1) {
-        // Volver a la pantalla inicial y restaurar posición del botón "No"
-        const btnNo = document.getElementById("btnNo");
-        btnNo.style.position = "";
-        btnNo.style.left = "";
-        btnNo.style.top = "";
-        btnNo.style.transform = "";
-        showStep(0);
-      }
-    }
-
-    // Manejo de multiselección (Paso 1 - Comida)
-    function toggleMultiSelect(card) {
-      card.classList.toggle("selected");
-      const val = card.getAttribute("data-value");
-      const emoji = card.getAttribute("data-emoji");
-      
-      const index = answers.foods.findIndex(item => item.value === val);
-      if (index > -1) {
-        answers.foods.splice(index, 1);
-      } else {
-        answers.foods.push({ value: val, emoji: emoji });
-      }
-    }
-
-    // Manejo de selección única (Pasos 2 y 3)
-    function selectSingle(card, category) {
-      // Deseleccionar hermanos
-      const stepContainer = card.closest(".step-card");
-      stepContainer.querySelectorAll(".option-card").forEach(c => c.classList.remove("selected"));
-      
-      card.classList.add("selected");
-      answers[category] = {
-        value: card.getAttribute("data-value"),
-        emoji: card.getAttribute("data-emoji")
-      };
-      
-      // Siguiente automático tras pequeña pausa para que vean la selección
-      setTimeout(() => {
-        nextStep();
-      }, 350);
-    }
-
-    // Validación antes de avanzar
-    function validateAndNext(step) {
-      if (step === 1 && answers.foods.length === 0) {
-        alert("¡Por favor, selecciona al menos un tipo de comida! 🍕🍣🌮");
-        return;
-      }
-      if (step === 2 && !answers.day) {
-        alert("¡Elige un día que te vaya bien! 📅");
-        return;
-      }
-      if (step === 3 && !answers.drink) {
-        alert("¡Elige con qué te gustaría brindar! 🥂");
-        return;
-      }
-      nextStep();
-    }
-
-    function nextStep() {
-      if (currentStep < 5) {
-        showStep(currentStep + 1);
-      }
-    }
-
-    // Ráfaga de partículas (Burst)
-    function burstHearts(count) {
-      const container = document.getElementById("heartParticlesContainer");
-      for (let i = 0; i < count; i++) {
-        const particle = document.createElement("div");
-        particle.className = "heart-particle";
-        particle.textContent = ["❤️", "💖", "💝", "✨", "💕", "🍵"][Math.floor(Math.random() * 6)];
-        
-        const startX = 20 + Math.random() * 60; // Concentrar en el medio
-        const startY = 30 + Math.random() * 40;
-        const duration = 2 + Math.random() * 3;
-        
-        particle.style.left = `${startX}vw`;
-        particle.style.bottom = `${startY}vh`;
-        particle.style.fontSize = `${1 + Math.random() * 2}rem`;
-        
-        // Modificar animación para que explote hacia arriba
-        particle.style.animation = `floatUp ${duration}s ease-out forwards`;
-        
-        container.appendChild(particle);
-        
-        setTimeout(() => {
-          particle.remove();
-        }, duration * 1000);
-      }
-    }
-
-    // Guardar respuestas en la base de datos temporal (kvdb.io)
-    async function saveResponsesToDb() {
-      const url = 'https://kvdb.io/carlos_omaima_cena_a8f9d0c2/respuestas';
-      const cleanAnswer = {
-        foods: answers.foods.map(f => f.value),
-        day: answers.day.value,
-        drink: answers.drink.value,
-        notes: answers.notes,
-        timestamp: new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })
-      };
-
-      try {
-        // 1. Obtener la lista actual de respuestas
-        const response = await fetch(url);
-        let list = [];
-        if (response.ok) {
-          try {
-            list = await response.json();
-            if (!Array.isArray(list)) list = [];
-          } catch(e) {
-            list = [];
-          }
-        }
-        
-        // 2. Añadir la nueva respuesta
-        list.push(cleanAnswer);
-
-        // 3. Guardar la lista actualizada
-        await fetch(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(list)
+        // Inicializar partículas de fondo
+        document.addEventListener("DOMContentLoaded", () => {
+            createHeartParticles();
         });
-        console.log("Respuesta guardada con éxito en la base de datos.");
-      } catch (err) {
-        console.error("Error al guardar la respuesta:", err);
-      }
-    }
 
-    // Compilar ticket de invitación final (Paso 5)
-    function compileTicket() {
-      // Guardar notas del textarea
-      answers.notes = document.getElementById("notesInput").value.trim();
+        // Generador de partículas de corazones
+        function createHeartParticles() {
+            const container = document.getElementById("heartParticlesContainer");
+            const icons = ["❤️", "💖", "💝", "✨", "💕", "🍕", "🍷"];
 
-      // Renderizar valores en el Ticket
-      const foodText = answers.foods.map(f => `${f.emoji} ${f.value}`).join(", ");
-      document.getElementById("ticketFood").innerHTML = foodText;
-      
-      document.getElementById("ticketDay").innerHTML = `${answers.day.emoji} ${answers.day.value}`;
-      document.getElementById("ticketDrink").innerHTML = `${answers.drink.emoji} ${answers.drink.value}`;
-      
-      const notesElement = document.getElementById("ticketNotes");
-      if (answers.notes) {
-        notesElement.textContent = answers.notes;
-        notesElement.style.color = "#333";
-      } else {
-        notesElement.textContent = "Ninguna (¡Sorpréndeme!)";
-        notesElement.style.color = "#888";
-      }
+            setInterval(() => {
+                if (document.hidden) return; // Pausar si no está en pantalla activa
 
-      // Guardar en la base de datos de manera asíncrona
-      saveResponsesToDb();
+                const particle = document.createElement("div");
+                particle.className = "heart-particle";
 
-      burstHearts(25);
-      showStep(5);
-    }
+                // Randomizar propiedades
+                const icon = icons[Math.floor(Math.random() * icons.length)];
+                particle.textContent = icon;
 
-    // Enviar a WhatsApp
-    function sendToWhatsapp() {
-      // Construir el mensaje bonito
-      const foodText = answers.foods.map(f => `${f.emoji} ${f.value}`).join(", ");
-      const notesPart = answers.notes ? `\n- 📝 *Notas:* _"${answers.notes}"_` : '\n- 📝 *Notas:* _¡Sorpréndeme!_';
-      
-      const mensaje = `¡Hola Carlos! Acepto la cena. 🥂✨ Aquí tienes mi propuesta de plan perfecto para nuestra cita:
+                const startX = Math.random() * 100; // Porcentaje de ancho
+                const duration = 5 + Math.random() * 6; // Entre 5 y 11 segundos
+                const fontSize = 1 + Math.random() * 1.5; // Entre 1rem y 2.5rem
+
+                particle.style.left = `${startX}vw`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.fontSize = `${fontSize}rem`;
+
+                container.appendChild(particle);
+
+                // Limpiar después de finalizar la animación
+                setTimeout(() => {
+                    particle.remove();
+                }, duration * 1000);
+            }, 500); // Crear una partícula cada 500ms
+        }
+
+        // Botón "No" esquivo
+        function escapeButton() {
+            const btnNo = document.getElementById("btnNo");
+
+            // Obtener dimensiones del botón e inyectar estilo absoluto si no lo tiene
+            btnNo.style.position = "fixed";
+
+            // Calcular dimensiones del viewport
+            const padding = 50;
+            const maxX = window.innerWidth - btnNo.offsetWidth - padding;
+            const maxY = window.innerHeight - btnNo.offsetHeight - padding;
+
+            // Asegurar que no se superponga directamente con el cursor inicial del evento
+            let randomX = padding + Math.random() * (maxX - padding);
+            let randomY = padding + Math.random() * (maxY - padding);
+
+            btnNo.style.left = `${randomX}px`;
+            btnNo.style.top = `${randomY}px`;
+
+            // Animación de escape extra
+            btnNo.style.transform = `scale(${0.9 + Math.random() * 0.2}) rotate(${(-10 + Math.random() * 20)}deg)`;
+        }
+
+        // Navegación
+        function showStep(n) {
+            // Ocultar paso actual con transición de salida
+            const activeCard = document.querySelector(".step-card.active");
+            if (activeCard) {
+                activeCard.classList.remove("active");
+            }
+
+            currentStep = n;
+
+            // Mostrar nuevo paso
+            const nextCard = document.getElementById(`step${n}`);
+            setTimeout(() => {
+                nextCard.classList.add("active");
+            }, 50);
+
+            // Mostrar/Ocultar barra de progreso
+            const progressContainer = document.getElementById("progressBarContainer");
+            if (n > 0 && n < 6) {
+                progressContainer.style.display = "flex";
+                // Calcular porcentaje
+                const percentage = ((n - 1) / (totalSteps - 1)) * 100;
+                document.getElementById("progressBarFill").style.width = `${percentage}%`;
+                document.getElementById("progressText").textContent = `Paso ${n} de ${totalSteps}`;
+            } else {
+                progressContainer.style.display = "none";
+            }
+
+            // Desplazarse arriba suavemente en móvil
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function startQuestionnaire() {
+            // Lanzar ráfaga de corazones al aceptar
+            burstHearts(15);
+            showStep(1);
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                showStep(currentStep - 1);
+            } else if (currentStep === 1) {
+                // Volver a la pantalla inicial y restaurar posición del botón "No"
+                const btnNo = document.getElementById("btnNo");
+                btnNo.style.position = "";
+                btnNo.style.left = "";
+                btnNo.style.top = "";
+                btnNo.style.transform = "";
+                showStep(0);
+            }
+        }
+
+        // Manejo de multiselección (Paso 1 - Comida)
+        function toggleMultiSelect(card) {
+            card.classList.toggle("selected");
+            const val = card.getAttribute("data-value");
+            const emoji = card.getAttribute("data-emoji");
+
+            const index = answers.foods.findIndex(item => item.value === val);
+            if (index > -1) {
+                answers.foods.splice(index, 1);
+            } else {
+                answers.foods.push({ value: val, emoji: emoji });
+            }
+        }
+
+        // Manejo de selección única (Pasos 2, 3 y 4)
+        function selectSingle(card, category) {
+            // Deseleccionar hermanos
+            const stepContainer = card.closest(".step-card");
+            stepContainer.querySelectorAll(".option-card").forEach(c => c.classList.remove("selected"));
+
+            card.classList.add("selected");
+            answers[category] = {
+                value: card.getAttribute("data-value"),
+                emoji: card.getAttribute("data-emoji")
+            };
+
+            // Siguiente automático tras pequeña pausa para que vean la selección
+            setTimeout(() => {
+                nextStep();
+            }, 350);
+        }
+
+        // Validación antes de avanzar
+        function validateAndNext(step) {
+            if (step === 1 && answers.foods.length === 0) {
+                alert("¡Por favor, selecciona al menos un tipo de comida! 🍕🍣🌮");
+                return;
+            }
+            if (step === 2 && !answers.vibe) {
+                alert("¡Por favor, selecciona un tipo de ambiente! ✨");
+                return;
+            }
+            if (step === 3 && !answers.day) {
+                alert("¡Elige un día que te vaya bien! 📅");
+                return;
+            }
+            if (step === 4 && !answers.drink) {
+                alert("¡Elige con qué te gustaría brindar! 🥂");
+                return;
+            }
+            nextStep();
+        }
+
+        function nextStep() {
+            if (currentStep < 6) {
+                showStep(currentStep + 1);
+            }
+        }
+
+        // Ráfaga de partículas (Burst)
+        function burstHearts(count) {
+            const container = document.getElementById("heartParticlesContainer");
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement("div");
+                particle.className = "heart-particle";
+                particle.textContent = ["❤️", "💖", "💝", "✨", "💕"][Math.floor(Math.random() * 5)];
+
+                const startX = 20 + Math.random() * 60; // Concentrar en el medio
+                const startY = 30 + Math.random() * 40;
+                const duration = 2 + Math.random() * 3;
+
+                particle.style.left = `${startX}vw`;
+                particle.style.bottom = `${startY}vh`;
+                particle.style.fontSize = `${1 + Math.random() * 2}rem`;
+
+                // Modificar animación para que explote hacia arriba
+                particle.style.animation = `floatUp ${duration}s ease-out forwards`;
+
+                container.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, duration * 1000);
+            }
+        }
+
+        // Compilar ticket de invitación final (Paso 6)
+        function compileTicket() {
+            // Guardar notas del textarea
+            answers.notes = document.getElementById("notesInput").value.trim();
+
+            // Renderizar valores en el Ticket
+            const foodText = answers.foods.map(f => `${f.emoji} ${f.value}`).join(", ");
+            document.getElementById("ticketFood").innerHTML = foodText;
+
+            document.getElementById("ticketVibe").innerHTML = `${answers.vibe.emoji} ${answers.vibe.value}`;
+            document.getElementById("ticketDay").innerHTML = `${answers.day.emoji} ${answers.day.value}`;
+            document.getElementById("ticketDrink").innerHTML = `${answers.drink.emoji} ${answers.drink.value}`;
+
+            const notesElement = document.getElementById("ticketNotes");
+            if (answers.notes) {
+                notesElement.textContent = answers.notes;
+                notesElement.style.color = "#333";
+            } else {
+                notesElement.textContent = "Ninguna (¡Sorpréndeme!)";
+                notesElement.style.color = "#888";
+            }
+
+            burstHearts(25);
+            showStep(6);
+        }
+
+        // Enviar a WhatsApp
+        function sendToWhatsapp() {
+            // Construir el mensaje bonito
+            const foodText = answers.foods.map(f => `${f.emoji} ${f.value}`).join(", ");
+            const notesPart = answers.notes ? `\n- 📝 *Notas:* _"${answers.notes}"_` : '\n- 📝 *Notas:* _¡Sorpréndeme!_';
+
+            const mensaje = `¡Hola Carlos! Acepto la cena. 🥂✨ Aquí tienes mi propuesta de plan perfecto para nuestra cita:
       
 - 🍕 *Comida:* ${foodText}
+- 🕯️ *Ambiente:* ${answers.vibe.emoji} ${answers.vibe.value}
 - 📅 *Día:* ${answers.day.emoji} ${answers.day.value}
 - 🍷 *Brindis:* ${answers.drink.emoji} ${answers.drink.value}${notesPart}
 
 ¡Nos vemos pronto! ❤️`;
 
-      // Enlace de WhatsApp sin número (abre selector de contactos)
-      const encodedMsg = encodeURIComponent(mensaje);
-      const url = `https://api.whatsapp.com/send?text=${encodedMsg}`;
-      
-      // Abrir en nueva pestaña
-      window.open(url, "_blank");
-    }
+            // Enlace de WhatsApp sin número (abre selector de contactos)
+            const encodedMsg = encodeURIComponent(mensaje);
+            const url = `https://api.whatsapp.com/send?text=${encodedMsg}`;
 
-    // Reiniciar
-    function resetQuestionnaire() {
-      // Limpiar datos
-      answers.foods = [];
-      answers.day = null;
-      answers.drink = null;
-      answers.notes = '';
-      
-      // Limpiar clases CSS
-      document.querySelectorAll(".option-card").forEach(c => c.classList.remove("selected"));
-      document.getElementById("notesInput").value = "";
-      
-      // Restaurar el botón No
-      const btnNo = document.getElementById("btnNo");
-      btnNo.style.position = "";
-      btnNo.style.left = "";
-      btnNo.style.top = "";
-      btnNo.style.transform = "";
-      
-      showStep(0);
-    }
-  </script>
+            // Abrir en nueva pestaña
+            window.open(url, "_blank");
+        }
+
+        // Reiniciar
+        function resetQuestionnaire() {
+            // Limpiar datos
+            answers.foods = [];
+            answers.vibe = null;
+            answers.day = null;
+            answers.drink = null;
+            answers.notes = '';
+
+            // Limpiar clases CSS
+            document.querySelectorAll(".option-card").forEach(c => c.classList.remove("selected"));
+            document.getElementById("notesInput").value = "";
+
+            // Restaurar el botón No
+            const btnNo = document.getElementById("btnNo");
+            btnNo.style.position = "";
+            btnNo.style.left = "";
+            btnNo.style.top = "";
+            btnNo.style.transform = "";
+
+            showStep(0);
+        }
+    </script>
 </body>
 
 </html>

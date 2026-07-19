@@ -257,7 +257,7 @@
   </footer>
 
   <script>
-    const url = 'https://kvdb.io/carlos_omaima_cena_a8f9d0c2/respuestas';
+    const url = 'https://kvdb.io/2Zur8MG8M8WtXgNEYQGC7V/respuestas';
 
     // Cargar respuestas al iniciar
     document.addEventListener("DOMContentLoaded", () => {
@@ -275,6 +275,13 @@
 
       try {
         const response = await fetch(url);
+        
+        // Si no se encuentra el recurso, es que todavía no se ha registrado ninguna respuesta (nuevo bucket)
+        if (response.status === 404) {
+          showEmptyState();
+          return;
+        }
+        
         if (!response.ok) throw new Error("No se pudo obtener los datos");
         
         let list = await response.json();
