@@ -36,7 +36,7 @@
         <div class="progress-bar-bg">
           <div class="progress-bar-fill" id="progressBarFill"></div>
         </div>
-        <span class="progress-text" id="progressText">Paso 1 de 5</span>
+        <span class="progress-text" id="progressText">Paso 1 de 4</span>
       </div>
 
       <!-- STEP 0: INTRO HERO -->
@@ -50,7 +50,7 @@
             ¡Sí, claro! 😍
           </button>
           <button class="btn-no" id="btnNo" onmouseover="escapeButton()" onclick="escapeButton()">
-            No... 😢
+            Me lo pensé mejor y... No... 😢
           </button>
         </div>
       </div>
@@ -105,46 +105,8 @@
         </div>
       </div>
 
-      <!-- STEP 2: VIBE / AMBIENTE -->
+      <!-- STEP 2: DAY OF THE DATE -->
       <div class="step-card" id="step2">
-        <h2>¿Qué tipo de ambiente prefieres?</h2>
-        <p class="step-subtitle">Selecciona tu atmósfera favorita para la velada ✨</p>
-        
-        <div class="options-grid">
-          <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Romántico & Velas" data-emoji="🕯️">
-            <div class="option-card-content">
-              <span class="option-emoji">🕯️</span>
-              <span class="option-title">Romántico</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Moderno & Chill" data-emoji="🎵">
-            <div class="option-card-content">
-              <span class="option-emoji">🎵</span>
-              <span class="option-title">Moderno/Chill</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Terraza con Vistas" data-emoji="🌌">
-            <div class="option-card-content">
-              <span class="option-emoji">🌌</span>
-              <span class="option-title">Terraza/Vistas</span>
-            </div>
-          </div>
-          <div class="option-card" onclick="selectSingle(this, 'vibe')" data-value="Íntimo & Secreto" data-emoji="🤫">
-            <div class="option-card-content">
-              <span class="option-emoji">🤫</span>
-              <span class="option-title">Íntimo/Secreto</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="wizard-actions">
-          <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="validateAndNext(2)">Siguiente <i class="fas fa-arrow-right"></i></button>
-        </div>
-      </div>
-
-      <!-- STEP 3: DAY OF THE DATE -->
-      <div class="step-card" id="step3">
         <h2>¿Qué día te vendría mejor?</h2>
         <p class="step-subtitle">Elige una fecha para reservar en nuestras agendas 📅</p>
         
@@ -177,12 +139,12 @@
 
         <div class="wizard-actions">
           <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="validateAndNext(3)">Siguiente <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-romantic" onclick="validateAndNext(2)">Siguiente <i class="fas fa-arrow-right"></i></button>
         </div>
       </div>
 
-      <!-- STEP 4: DRINK -->
-      <div class="step-card" id="step4">
+      <!-- STEP 3: DRINK -->
+      <div class="step-card" id="step3">
         <h2>¿Con qué brindamos?</h2>
         <p class="step-subtitle">Para celebrar el encuentro 🥂</p>
         
@@ -205,6 +167,12 @@
               <span class="option-title">Cócteles</span>
             </div>
           </div>
+          <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Matcha" data-emoji="🍵">
+            <div class="option-card-content">
+              <span class="option-emoji">🍵</span>
+              <span class="option-title">Matcha</span>
+            </div>
+          </div>
           <div class="option-card" onclick="selectSingle(this, 'drink')" data-value="Refresco/Agua" data-emoji="🥤">
             <div class="option-card-content">
               <span class="option-emoji">🥤</span>
@@ -215,14 +183,14 @@
 
         <div class="wizard-actions">
           <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
-          <button class="btn-romantic" onclick="validateAndNext(4)">Siguiente <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-romantic" onclick="validateAndNext(3)">Siguiente <i class="fas fa-arrow-right"></i></button>
         </div>
       </div>
 
-      <!-- STEP 5: NOTES -->
-      <div class="step-card" id="step5">
-        <h2>¿Algún detalle que deba saber?</h2>
-        <p class="step-subtitle">Alergias, preferencias dietéticas, tu postre favorito o cualquier detalle extra 📝</p>
+      <!-- STEP 4: NOTES -->
+      <div class="step-card" id="step4">
+        <h2>¿Algún detalle que deba saber? (importante que respondas esto)</h2>
+        <p class="step-subtitle">Alergias, preferencias dietéticas, tu postre favorito 🤔, o cualquier detalle extra 📝</p>
         
         <textarea class="text-area-custom" id="notesInput" placeholder="Ej: Soy vegetariana / Me encantan las terrazas / Odio el cilantro / ¡Sorpréndeme con la música!"></textarea>
 
@@ -232,8 +200,8 @@
         </div>
       </div>
 
-      <!-- STEP 6: TICKET SUMMARY -->
-      <div class="step-card" id="step6">
+      <!-- STEP 5: TICKET SUMMARY -->
+      <div class="step-card" id="step5">
         <h2>¡Tenemos el plan perfecto! 🎉</h2>
         <p class="step-subtitle">Aquí está la propuesta oficial para nuestra cita gastronómica:</p>
         
@@ -248,10 +216,6 @@
             <div class="ticket-row">
               <span class="ticket-label">🍕 Comida</span>
               <span class="ticket-val" id="ticketFood">-</span>
-            </div>
-            <div class="ticket-row">
-              <span class="ticket-label">🕯️ Ambiente</span>
-              <span class="ticket-val" id="ticketVibe">-</span>
             </div>
             <div class="ticket-row">
               <span class="ticket-label">📅 Fecha</span>
@@ -291,7 +255,7 @@
       <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div class="logo">CV.</div>
         <div class="copyright" style="font-size: 0.9rem; color: var(--text-muted);">
-          <p>&copy; 2026 Carlos Velasco García. Hecho con ❤️</p>
+          <p>&copy; 2026 Carlos Velasco García.</p>
         </div>
       </div>
     </div>
@@ -301,12 +265,11 @@
   <script>
     // Variables de estado
     let currentStep = 0;
-    const totalSteps = 5;
+    const totalSteps = 4;
     
     // Almacén de respuestas
     const answers = {
       foods: [], // Array para multiselección
-      vibe: null,
       day: null,
       drink: null,
       notes: ''
@@ -320,7 +283,7 @@
     // Generador de partículas de corazones
     function createHeartParticles() {
       const container = document.getElementById("heartParticlesContainer");
-      const icons = ["❤️", "💖", "💝", "✨", "💕", "🍕", "🍷"];
+      const icons = ["❤️", "💖", "💝", "✨", "💕", "🍕", "🍷", "🍵"];
       
       setInterval(() => {
         if (document.hidden) return; // Pausar si no está en pantalla activa
@@ -390,7 +353,7 @@
 
       // Mostrar/Ocultar barra de progreso
       const progressContainer = document.getElementById("progressBarContainer");
-      if (n > 0 && n < 6) {
+      if (n > 0 && n < 5) {
         progressContainer.style.display = "flex";
         // Calcular porcentaje
         const percentage = ((n - 1) / (totalSteps - 1)) * 100;
@@ -438,7 +401,7 @@
       }
     }
 
-    // Manejo de selección única (Pasos 2, 3 y 4)
+    // Manejo de selección única (Pasos 2 y 3)
     function selectSingle(card, category) {
       // Deseleccionar hermanos
       const stepContainer = card.closest(".step-card");
@@ -462,15 +425,11 @@
         alert("¡Por favor, selecciona al menos un tipo de comida! 🍕🍣🌮");
         return;
       }
-      if (step === 2 && !answers.vibe) {
-        alert("¡Por favor, selecciona un tipo de ambiente! ✨");
-        return;
-      }
-      if (step === 3 && !answers.day) {
+      if (step === 2 && !answers.day) {
         alert("¡Elige un día que te vaya bien! 📅");
         return;
       }
-      if (step === 4 && !answers.drink) {
+      if (step === 3 && !answers.drink) {
         alert("¡Elige con qué te gustaría brindar! 🥂");
         return;
       }
@@ -478,7 +437,7 @@
     }
 
     function nextStep() {
-      if (currentStep < 6) {
+      if (currentStep < 5) {
         showStep(currentStep + 1);
       }
     }
@@ -489,7 +448,7 @@
       for (let i = 0; i < count; i++) {
         const particle = document.createElement("div");
         particle.className = "heart-particle";
-        particle.textContent = ["❤️", "💖", "💝", "✨", "💕"][Math.floor(Math.random() * 5)];
+        particle.textContent = ["❤️", "💖", "💝", "✨", "💕", "🍵"][Math.floor(Math.random() * 6)];
         
         const startX = 20 + Math.random() * 60; // Concentrar en el medio
         const startY = 30 + Math.random() * 40;
@@ -510,7 +469,48 @@
       }
     }
 
-    // Compilar ticket de invitación final (Paso 6)
+    // Guardar respuestas en la base de datos temporal (kvdb.io)
+    async function saveResponsesToDb() {
+      const url = 'https://kvdb.io/carlos_omaima_cena_a8f9d0c2/respuestas';
+      const cleanAnswer = {
+        foods: answers.foods.map(f => f.value),
+        day: answers.day.value,
+        drink: answers.drink.value,
+        notes: answers.notes,
+        timestamp: new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })
+      };
+
+      try {
+        // 1. Obtener la lista actual de respuestas
+        const response = await fetch(url);
+        let list = [];
+        if (response.ok) {
+          try {
+            list = await response.json();
+            if (!Array.isArray(list)) list = [];
+          } catch(e) {
+            list = [];
+          }
+        }
+        
+        // 2. Añadir la nueva respuesta
+        list.push(cleanAnswer);
+
+        // 3. Guardar la lista actualizada
+        await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(list)
+        });
+        console.log("Respuesta guardada con éxito en la base de datos.");
+      } catch (err) {
+        console.error("Error al guardar la respuesta:", err);
+      }
+    }
+
+    // Compilar ticket de invitación final (Paso 5)
     function compileTicket() {
       // Guardar notas del textarea
       answers.notes = document.getElementById("notesInput").value.trim();
@@ -519,7 +519,6 @@
       const foodText = answers.foods.map(f => `${f.emoji} ${f.value}`).join(", ");
       document.getElementById("ticketFood").innerHTML = foodText;
       
-      document.getElementById("ticketVibe").innerHTML = `${answers.vibe.emoji} ${answers.vibe.value}`;
       document.getElementById("ticketDay").innerHTML = `${answers.day.emoji} ${answers.day.value}`;
       document.getElementById("ticketDrink").innerHTML = `${answers.drink.emoji} ${answers.drink.value}`;
       
@@ -532,8 +531,11 @@
         notesElement.style.color = "#888";
       }
 
+      // Guardar en la base de datos de manera asíncrona
+      saveResponsesToDb();
+
       burstHearts(25);
-      showStep(6);
+      showStep(5);
     }
 
     // Enviar a WhatsApp
@@ -545,7 +547,6 @@
       const mensaje = `¡Hola Carlos! Acepto la cena. 🥂✨ Aquí tienes mi propuesta de plan perfecto para nuestra cita:
       
 - 🍕 *Comida:* ${foodText}
-- 🕯️ *Ambiente:* ${answers.vibe.emoji} ${answers.vibe.value}
 - 📅 *Día:* ${answers.day.emoji} ${answers.day.value}
 - 🍷 *Brindis:* ${answers.drink.emoji} ${answers.drink.value}${notesPart}
 
@@ -563,7 +564,6 @@
     function resetQuestionnaire() {
       // Limpiar datos
       answers.foods = [];
-      answers.vibe = null;
       answers.day = null;
       answers.drink = null;
       answers.notes = '';
