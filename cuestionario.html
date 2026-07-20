@@ -257,6 +257,9 @@
 
   <!-- SCRIPT INTERACTIVO -->
   <script>
+    // CONFIGURACIÓN: Cambiar a true para deshabilitar el cuestionario, o false para habilitarlo de nuevo
+    const CUESTIONARIO_DESHABILITADO = true;
+
     // Variables de estado
     let currentStep = 0;
     const totalSteps = 4;
@@ -272,7 +275,47 @@
     // Inicializar partículas de fondo
     document.addEventListener("DOMContentLoaded", () => {
       createHeartParticles();
+      if (CUESTIONARIO_DESHABILITADO) {
+        disableQuestionnaireUI();
+      }
     });
+
+    // Función para deshabilitar la interfaz del cuestionario
+    function disableQuestionnaireUI() {
+      // Ocultar barra de progreso
+      const progressContainer = document.getElementById("progressBarContainer");
+      if (progressContainer) progressContainer.style.display = "none";
+
+      // Ocultar todos los pasos del wizard
+      const stepCards = document.querySelectorAll(".step-card");
+      stepCards.forEach(card => {
+        card.style.display = "none";
+        card.classList.remove("active");
+      });
+
+      // Crear e inyectar tarjeta de mantenimiento/deshabilitado
+      const container = document.querySelector(".cuestionario-container");
+      if (container) {
+        const disabledCard = document.createElement("div");
+        disabledCard.className = "step-card active";
+        disabledCard.id = "disabledCard";
+        disabledCard.style.textAlign = "center";
+        disabledCard.style.padding = "3rem 1.5rem";
+        disabledCard.innerHTML = `
+          <span class="intro-icon" style="font-size: 5rem; display: block; margin-bottom: 1.5rem; animation: heartBeat 1.5s infinite;">⏳</span>
+          <h2 style="font-size: 2.2rem; background: var(--gradient-romantic); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem;">Cuestionario No Disponible</h2>
+          <p class="step-subtitle" style="margin-bottom: 2rem; color: var(--text-main);">
+            El planificador de cenas está temporalmente deshabilitado en este momento. ¡Vuelve a intentarlo más tarde o contacta directamente con Carlos! 🍽️✨
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center;">
+            <a href="personal.html" class="btn-romantic" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.8rem 1.5rem; font-size: 1.1rem; border-radius: 50px;">
+              <i class="fas fa-arrow-left"></i> Volver a Personal
+            </a>
+          </div>
+        `;
+        container.appendChild(disabledCard);
+      }
+    }
 
     // Generador de partículas de corazones
     function createHeartParticles() {
