@@ -120,7 +120,7 @@
         <div class="wizard-actions">
           <button class="btn-wizard-prev" onclick="prevStep()">Anterior</button>
           <button class="btn-romantic" onclick="validateAndNext(2)">Siguiente <i
-              class="fas fa-arrow-right"></i></button>
+              class="fas fa-arrow-right"></i></button>º
         </div>
       </div>
 
@@ -241,21 +241,13 @@
 
         <!-- SUCCESS STATE (Oculto inicialmente) -->
         <div id="ticketSuccessState" style="display: none; text-align: center; padding: 2rem 0;">
-          <span class="intro-icon"
-            style="font-size: 5rem; display: block; margin-bottom: 1.5rem; animation: heartBeat 1.5s infinite;">💖</span>
           <h2
             style="font-size: 2.2rem; background: var(--gradient-romantic); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem;">
             ¡Plan Enviado con Éxito!</h2>
           <p class="step-subtitle" style="margin-bottom: 2rem; color: var(--text-main);">
             Tus respuestas han sido enviadas de forma segura por correo electrónico y guardadas en el panel. Carlos ya
-            puede ver tu propuesta y se pondrá en contacto contigo muy pronto. ¡Qué ganas! 🍽️✨
+            puede ver tus respuestas y se pondrá en contacto contigo muy pronto. ¡Qué ganas! 🍽️✨
           </p>
-          <div
-            style="background: rgba(255, 77, 109, 0.05); border: 1px dashed var(--romantic-primary); border-radius: 8px; padding: 1rem; margin-bottom: 2rem; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
-            <strong>Nota para Carlos:</strong> La primera vez que envíes una respuesta, recibirás un correo de
-            confirmación de <em>FormSubmit</em> en <strong>cc2003velas@gmail.com</strong> para activar la recepción.
-            ¡Solo debes hacer clic en "Activar" una vez!
-          </div>
           <button class="btn-reset" onclick="resetQuestionnaire()">Volver a empezar</button>
         </div>
       </div>
