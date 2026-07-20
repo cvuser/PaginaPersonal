@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap');
+
 /* CUESTIONARIO ROMÁNTICO - ESTILOS PREMIUM */
 
 :root {
@@ -15,6 +17,46 @@
     
     --gradient-romantic: linear-gradient(135deg, var(--romantic-primary), #7209b7);
     --gradient-gold: linear-gradient(135deg, #fbbf24, #f59e0b);
+
+    /* Variables locales e independientes */
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* BUTTONS BASE */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* BODY EXTRAS */
@@ -44,9 +86,7 @@ body.romantic-page {
 
 .heart-particle {
     position: absolute;
-    bottom: -50px;
-    font-size: 1.5rem;
-    color: var(--romantic-primary);
+    bottom: -80px;
     opacity: 0.6;
     animation: floatUp 8s linear infinite;
     pointer-events: none;

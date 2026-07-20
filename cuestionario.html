@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Cenamos Juntos? | Planificador de Cena Especial</title>
-  <link rel="stylesheet" href="css/styles_premium.css">
   <link rel="stylesheet" href="css/cuestionario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -251,18 +250,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer" style="padding: 2rem 0; margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.05); background: rgba(9, 3, 11, 0.95); z-index: 10;">
-    <div class="container">
-      <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        <div class="logo">CV.</div>
-        <div class="copyright" style="font-size: 0.9rem; color: var(--text-muted);">
-          <p>&copy; 2026 Carlos Velasco García.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <!-- SCRIPT INTERACTIVO -->
   <script>
     // Variables de estado
@@ -285,25 +272,25 @@
     // Generador de partículas de corazones
     function createHeartParticles() {
       const container = document.getElementById("heartParticlesContainer");
-      const icons = ["❤️", "💖", "💝", "✨", "💕", "🍕", "🍷", "🍵"];
+      const images = ["assets/images/mbappe.png", "assets/images/bob.png"];
       
       setInterval(() => {
         if (document.hidden) return; // Pausar si no está en pantalla activa
         
-        const particle = document.createElement("div");
+        const particle = document.createElement("img");
         particle.className = "heart-particle";
         
         // Randomizar propiedades
-        const icon = icons[Math.floor(Math.random() * icons.length)];
-        particle.textContent = icon;
+        const imgSrc = images[Math.floor(Math.random() * images.length)];
+        particle.src = imgSrc;
         
         const startX = Math.random() * 100; // Porcentaje de ancho
         const duration = 5 + Math.random() * 6; // Entre 5 y 11 segundos
-        const fontSize = 1 + Math.random() * 1.5; // Entre 1rem y 2.5rem
+        const width = 30 + Math.random() * 40; // Entre 30px y 70px
         
         particle.style.left = `${startX}vw`;
         particle.style.animationDuration = `${duration}s`;
-        particle.style.fontSize = `${fontSize}rem`;
+        particle.style.width = `${width}px`;
         
         container.appendChild(particle);
         
@@ -318,20 +305,20 @@
     function escapeButton() {
       const btnNo = document.getElementById("btnNo");
       
-      // Obtener dimensiones del botón e inyectar estilo absoluto si no lo tiene
-      btnNo.style.position = "fixed";
+      // Posicionamiento relativo para que se mueva respecto a su origen y no salga de la pantalla
+      btnNo.style.position = "relative";
       
-      // Calcular dimensiones del viewport
-      const padding = 50;
-      const maxX = window.innerWidth - btnNo.offsetWidth - padding;
-      const maxY = window.innerHeight - btnNo.offsetHeight - padding;
+      const minMove = 100;
+      const maxMove = 220;
       
-      // Asegurar que no se superponga directamente con el cursor inicial del evento
-      let randomX = padding + Math.random() * (maxX - padding);
-      let randomY = padding + Math.random() * (maxY - padding);
+      const dirX = Math.random() < 0.5 ? -1 : 1;
+      const dirY = Math.random() < 0.5 ? -1 : 1;
       
-      btnNo.style.left = `${randomX}px`;
-      btnNo.style.top = `${randomY}px`;
+      const moveX = dirX * (minMove + Math.random() * (maxMove - minMove));
+      const moveY = dirY * (minMove + Math.random() * (maxMove - minMove));
+      
+      btnNo.style.left = `${moveX}px`;
+      btnNo.style.top = `${moveY}px`;
       
       // Animación de escape extra
       btnNo.style.transform = `scale(${0.9 + Math.random() * 0.2}) rotate(${(-10 + Math.random() * 20)}deg)`;
@@ -447,18 +434,23 @@
     // Ráfaga de partículas (Burst)
     function burstHearts(count) {
       const container = document.getElementById("heartParticlesContainer");
+      const images = ["assets/images/mbappe.png", "assets/images/bob.png"];
+      
       for (let i = 0; i < count; i++) {
-        const particle = document.createElement("div");
+        const particle = document.createElement("img");
         particle.className = "heart-particle";
-        particle.textContent = ["❤️", "💖", "💝", "✨", "💕", "🍵"][Math.floor(Math.random() * 6)];
+        
+        const imgSrc = images[Math.floor(Math.random() * images.length)];
+        particle.src = imgSrc;
         
         const startX = 20 + Math.random() * 60; // Concentrar en el medio
         const startY = 30 + Math.random() * 40;
         const duration = 2 + Math.random() * 3;
+        const width = 40 + Math.random() * 45; // Entre 40px y 85px
         
         particle.style.left = `${startX}vw`;
         particle.style.bottom = `${startY}vh`;
-        particle.style.fontSize = `${1 + Math.random() * 2}rem`;
+        particle.style.width = `${width}px`;
         
         // Modificar animación para que explote hacia arriba
         particle.style.animation = `floatUp ${duration}s ease-out forwards`;
