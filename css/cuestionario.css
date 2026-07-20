@@ -191,6 +191,7 @@ body.romantic-page {
     margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #fff, var(--romantic-accent));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
